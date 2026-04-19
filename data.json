@@ -28,7 +28,8 @@
         "title": "Lex.dk: Sundhedsråd",
         "url": "https://lex.dk/sundhedsr%C3%A5d"
       }
-    ]
+    ],
+    "lastScrapeRun": "2026-04-19T20:19:14.708604+00:00"
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
@@ -499,7 +500,33 @@
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/"
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=0788a937-0235-4348-8977-ccd7a310b18d"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=a34cb00e-d3c2-42fb-9978-833aa5e1ccca"
+        }
+      ]
     },
     {
       "id": "horsens",
@@ -533,7 +560,33 @@
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/"
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Horsens (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=482bb09b-7985-4a23-ac66-844c6e532f9f"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Horsens (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=b8c18264-a378-43d2-9719-677e2f143c5e"
+        }
+      ]
     },
     {
       "id": "kronjylland",
@@ -579,8 +632,34 @@
           "municipality": "Randers"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
-      "officialUrl": "https://www.rm.dk"
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=296d8b21-9333-4b56-a59b-c1904f10f395"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=ecf89ba0-c546-490e-9aef-5a4c140706b5"
+        }
+      ]
     },
     {
       "id": "midt",
@@ -630,8 +709,34 @@
           "municipality": "Silkeborg"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
-      "officialUrl": "https://www.rm.dk"
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Midt (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=5b70fabc-5a6b-45f4-9f66-9f4609753a9c"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Midt (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=8ba087a4-e670-41ec-99cd-b3fc9e5bfa43"
+        }
+      ]
     },
     {
       "id": "vestjylland",
@@ -670,8 +775,34 @@
           "role": "Formand for Social- og Sundhedsudvalget"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
-      "officialUrl": "https://www.rm.dk"
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=e21e6b06-3091-43fd-9d4d-e9331cacfe45"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=c79e1f22-cb42-444b-afcc-591f35a982fb"
+        }
+      ]
     },
     {
       "id": "fyn",
@@ -699,8 +830,90 @@
       ],
       "regionalMembers": [],
       "municipalMembers": [],
-      "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-fyn",
-      "officialUrl": "https://regionsyddanmark.dk"
+      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn",
+      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn",
+      "referater": [
+        {
+          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sønderjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
+        },
+        {
+          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
+        },
+        {
+          "title": "Mødediæter m.m.",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
+        },
+        {
+          "title": "Regionsrådsmøder",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
+        },
+        {
+          "title": "Video fra regionsrådsmøderne",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
+        },
+        {
+          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
+        },
+        {
+          "title": "Akutlæge med opråb: Ring, før du møder op",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
+        },
+        {
+          "title": "Snart kan Peder møde lægen i varmestuen",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
+        },
+        {
+          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        }
+      ]
     },
     {
       "id": "lillebaelt",
@@ -722,8 +935,90 @@
       ],
       "regionalMembers": [],
       "municipalMembers": [],
-      "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-lillebaelt",
-      "officialUrl": "https://regionsyddanmark.dk"
+      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt",
+      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt",
+      "referater": [
+        {
+          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sønderjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
+        },
+        {
+          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
+        },
+        {
+          "title": "Mødediæter m.m.",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
+        },
+        {
+          "title": "Regionsrådsmøder",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
+        },
+        {
+          "title": "Video fra regionsrådsmøderne",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
+        },
+        {
+          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
+        },
+        {
+          "title": "Akutlæge med opråb: Ring, før du møder op",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
+        },
+        {
+          "title": "Snart kan Peder møde lægen i varmestuen",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
+        },
+        {
+          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        }
+      ]
     },
     {
       "id": "sydvestjylland",
@@ -745,8 +1040,90 @@
       ],
       "regionalMembers": [],
       "municipalMembers": [],
-      "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-sydvestjylland",
-      "officialUrl": "https://regionsyddanmark.dk"
+      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland",
+      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland",
+      "referater": [
+        {
+          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sønderjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
+        },
+        {
+          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
+        },
+        {
+          "title": "Mødediæter m.m.",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
+        },
+        {
+          "title": "Regionsrådsmøder",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
+        },
+        {
+          "title": "Video fra regionsrådsmøderne",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
+        },
+        {
+          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
+        },
+        {
+          "title": "Akutlæge med opråb: Ring, før du møder op",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
+        },
+        {
+          "title": "Snart kan Peder møde lægen i varmestuen",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
+        },
+        {
+          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        }
+      ]
     },
     {
       "id": "soenderjylland",
@@ -769,7 +1146,89 @@
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland",
-      "officialUrl": "https://regionsyddanmark.dk"
+      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland",
+      "referater": [
+        {
+          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Sønderjylland",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
+        },
+        {
+          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
+        },
+        {
+          "title": "Mødediæter m.m.",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
+        },
+        {
+          "title": "Regionsrådsmøder",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
+        },
+        {
+          "title": "Video fra regionsrådsmøderne",
+          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
+        },
+        {
+          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
+        },
+        {
+          "title": "Akutlæge med opråb: Ring, før du møder op",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
+        },
+        {
+          "title": "Snart kan Peder møde lægen i varmestuen",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
+        },
+        {
+          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
+          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
+        },
+        {
+          "title": "Deltag i regionsrådsmøde",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+        },
+        {
+          "title": "Spørgetid ved regionsrådets møder",
+          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+        },
+        {
+          "title": "Dagsordener og referater for politiske udvalg",
+          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Fyn",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        }
+      ]
     }
   ],
   "parties": {
