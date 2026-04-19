@@ -1,25 +1,69 @@
 {
   "meta": {
-    "lastUpdated": "2026-04-17",
+    "lastUpdated": "2026-04-19",
     "dataVersion": "0.1.0",
     "note": "Foreløbig datasæt. Formænd, næstformænd og regioner er verificeret via offentlige kilder. Fuld medlemsliste kræver scraping af regionernes officielle sider — se scraper.py.",
     "sources": [
-      {"title": "Aftale om regionernes økonomi for 2026 (FM.dk)", "url": "https://fm.dk/media/oycane2j/aftale-om-regionernes-oekonomi-for-2026-a.pdf"},
-      {"title": "Indenrigs- og Sundhedsministeriet: De nye sundhedsråd", "url": "https://www.ism.dk/temaer/sundhedsreformen-2024/sundhedsraad"},
-      {"title": "Danske Regioner: Ny organisering", "url": "https://www.regioner.dk/sundhedsreform/viden-om-sundhedsreformen/ny-organisering-af-sundhedsvaesenet/"},
-      {"title": "KL: Kommunale medlemmer af sundhedsrådene", "url": "https://www.kl.dk/forsidenyheder/2026/januar/her-er-de-kommunale-medlemmer-af-sundhedsraadene"},
-      {"title": "Ældre Sagen: De 17 sundhedsråds hjemmesider", "url": "https://www.aeldresagen.dk/frivilligportalen/frivilligomraader/lokal-indflydelse/aeldre--og-sundhedsudvalg/de-17-sundhedsraads-hjemmesider"},
-      {"title": "Lex.dk: Sundhedsråd", "url": "https://lex.dk/sundhedsr%C3%A5d"}
-    ]
+      {
+        "title": "Aftale om regionernes økonomi for 2026 (FM.dk)",
+        "url": "https://fm.dk/media/oycane2j/aftale-om-regionernes-oekonomi-for-2026-a.pdf"
+      },
+      {
+        "title": "Indenrigs- og Sundhedsministeriet: De nye sundhedsråd",
+        "url": "https://www.ism.dk/temaer/sundhedsreformen-2024/sundhedsraad"
+      },
+      {
+        "title": "Danske Regioner: Ny organisering",
+        "url": "https://www.regioner.dk/sundhedsreform/viden-om-sundhedsreformen/ny-organisering-af-sundhedsvaesenet/"
+      },
+      {
+        "title": "KL: Kommunale medlemmer af sundhedsrådene",
+        "url": "https://www.kl.dk/forsidenyheder/2026/januar/her-er-de-kommunale-medlemmer-af-sundhedsraadene"
+      },
+      {
+        "title": "Ældre Sagen: De 17 sundhedsråds hjemmesider",
+        "url": "https://www.aeldresagen.dk/frivilligportalen/frivilligomraader/lokal-indflydelse/aeldre--og-sundhedsudvalg/de-17-sundhedsraads-hjemmesider"
+      },
+      {
+        "title": "Lex.dk: Sundhedsråd",
+        "url": "https://lex.dk/sundhedsr%C3%A5d"
+      }
+    ],
+    "lastScrapeRun": "2026-04-19T19:55:20.003829+00:00"
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
     "timeline": [
-      {"year": 2026, "amountMio": 325, "label": "325 mio. kr.", "note": "Øremærket implementering af sundhedsreform — patientrettet forebyggelse og akutsygepleje. Sundhedsrådene fungerer som forberedende råd."},
-      {"year": 2027, "amountMio": 600, "label": "ca. 600 mio. kr.", "note": "Knap 0,6 mia. kr. til kommunalt sundhedsområde via sundhedsrådene. Fuld sundhedsrådsstruktur træder i kraft."},
-      {"year": 2028, "amountMio": 1100, "label": "ca. 1,1 mia. kr.", "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."},
-      {"year": 2029, "amountMio": 1550, "label": "ca. 1,55 mia. kr.", "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."},
-      {"year": 2030, "amountMio": 2000, "label": "op mod 2 mia. kr.", "note": "Fuldt niveau (2025-priser) til kommunale sundhedsindsatser via de 17 sundhedsråd."}
+      {
+        "year": 2026,
+        "amountMio": 325,
+        "label": "325 mio. kr.",
+        "note": "Øremærket implementering af sundhedsreform — patientrettet forebyggelse og akutsygepleje. Sundhedsrådene fungerer som forberedende råd."
+      },
+      {
+        "year": 2027,
+        "amountMio": 600,
+        "label": "ca. 600 mio. kr.",
+        "note": "Knap 0,6 mia. kr. til kommunalt sundhedsområde via sundhedsrådene. Fuld sundhedsrådsstruktur træder i kraft."
+      },
+      {
+        "year": 2028,
+        "amountMio": 1100,
+        "label": "ca. 1,1 mia. kr.",
+        "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."
+      },
+      {
+        "year": 2029,
+        "amountMio": 1550,
+        "label": "ca. 1,55 mia. kr.",
+        "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."
+      },
+      {
+        "year": 2030,
+        "amountMio": 2000,
+        "label": "op mod 2 mia. kr.",
+        "note": "Fuldt niveau (2025-priser) til kommunale sundhedsindsatser via de 17 sundhedsråd."
+      }
     ],
     "additional": {
       "operationsLift2026Mia": 2.3,
@@ -35,7 +79,10 @@
       "status": "Forberedende i 2026 — fuld status 1. januar 2027",
       "fullLaunch": "2027-01-01",
       "description": "Region Hovedstaden og Region Sjælland sammenlægges til Region Østdanmark pr. 1. januar 2027. I hele 2026 fungerer regionsrådet som forberedende råd.",
-      "regionsraadsformand": {"name": "Lars Gaardhøj", "party": "S"},
+      "regionsraadsformand": {
+        "name": "Lars Gaardhøj",
+        "party": "S"
+      },
       "councilCount": 6,
       "website": "https://www.regionoest.dk"
     },
@@ -44,7 +91,10 @@
       "name": "Region Nordjylland",
       "status": "Aktiv",
       "description": "Region Nordjylland fortsætter som selvstændig region. Regionsrådsformanden er også ny formand for Danske Regioner.",
-      "regionsraadsformand": {"name": "Mads Duedahl", "party": "V"},
+      "regionsraadsformand": {
+        "name": "Mads Duedahl",
+        "party": "V"
+      },
       "councilCount": 2,
       "website": "https://rn.dk"
     },
@@ -53,7 +103,10 @@
       "name": "Region Midtjylland",
       "status": "Aktiv",
       "description": "Region Midtjylland har fem sundhedsråd — flest i landet efter Østdanmark.",
-      "regionsraadsformand": {"name": "Anders G. Christensen", "party": "V"},
+      "regionsraadsformand": {
+        "name": "Anders G. Christensen",
+        "party": "V"
+      },
       "councilCount": 5,
       "website": "https://www.rm.dk"
     },
@@ -62,7 +115,10 @@
       "name": "Region Syddanmark",
       "status": "Aktiv",
       "description": "Region Syddanmark har fire sundhedsråd dækkende Fyn, Lillebælt, Sydvestjylland og Sønderjylland.",
-      "regionsraadsformand": {"name": "Bo Libergren", "party": "V"},
+      "regionsraadsformand": {
+        "name": "Bo Libergren",
+        "party": "V"
+      },
       "councilCount": 4,
       "website": "https://regionsyddanmark.dk"
     }
@@ -72,9 +128,19 @@
       "id": "hovedstaden",
       "name": "Sundhedsråd Hovedstaden",
       "region": "oestdanmark",
-      "formand": {"name": "(Radikale Venstre)", "party": "B", "note": "Navn ikke bekræftet i denne version"},
-      "naestformand": {"name": "(Socialdemokratiet)", "party": "A"},
-      "municipalities": ["Københavns Kommune", "Frederiksberg"],
+      "formand": {
+        "name": "(Radikale Venstre)",
+        "party": "B",
+        "note": "Navn ikke bekræftet i denne version"
+      },
+      "naestformand": {
+        "name": "(Socialdemokratiet)",
+        "party": "A"
+      },
+      "municipalities": [
+        "Københavns Kommune",
+        "Frederiksberg"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -84,9 +150,22 @@
       "id": "koebenhavns-omegn-nord",
       "name": "Sundhedsråd Københavns Omegn Nord",
       "region": "oestdanmark",
-      "formand": {"name": "(Venstre)", "party": "V"},
-      "naestformand": {"name": "(Moderaterne)", "party": "M"},
-      "municipalities": ["Gentofte", "Gladsaxe", "Herlev", "Lyngby-Taarbæk", "Rudersdal", "Furesø"],
+      "formand": {
+        "name": "(Venstre)",
+        "party": "V"
+      },
+      "naestformand": {
+        "name": "(Moderaterne)",
+        "party": "M"
+      },
+      "municipalities": [
+        "Gentofte",
+        "Gladsaxe",
+        "Herlev",
+        "Lyngby-Taarbæk",
+        "Rudersdal",
+        "Furesø"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -96,9 +175,25 @@
       "id": "nordsjaelland",
       "name": "Sundhedsråd Nordsjælland",
       "region": "oestdanmark",
-      "formand": {"name": "(Det Konservative Folkeparti)", "party": "C"},
-      "naestformand": {"name": "(Venstre)", "party": "V"},
-      "municipalities": ["Allerød", "Egedal", "Fredensborg", "Frederikssund", "Gribskov", "Halsnæs", "Helsingør", "Hillerød", "Hørsholm"],
+      "formand": {
+        "name": "(Det Konservative Folkeparti)",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "(Venstre)",
+        "party": "V"
+      },
+      "municipalities": [
+        "Allerød",
+        "Egedal",
+        "Fredensborg",
+        "Frederikssund",
+        "Gribskov",
+        "Halsnæs",
+        "Helsingør",
+        "Hillerød",
+        "Hørsholm"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -108,9 +203,27 @@
       "id": "amager-vestegnen",
       "name": "Sundhedsråd Amager og Vestegnen",
       "region": "oestdanmark",
-      "formand": {"name": "(Enhedslisten)", "party": "Ø"},
-      "naestformand": {"name": "(Socialdemokratiet)", "party": "A"},
-      "municipalities": ["Albertslund", "Ballerup", "Brøndby", "Dragør", "Glostrup", "Hvidovre", "Høje-Taastrup", "Ishøj", "Rødovre", "Tårnby", "Vallensbæk"],
+      "formand": {
+        "name": "(Enhedslisten)",
+        "party": "Ø"
+      },
+      "naestformand": {
+        "name": "(Socialdemokratiet)",
+        "party": "A"
+      },
+      "municipalities": [
+        "Albertslund",
+        "Ballerup",
+        "Brøndby",
+        "Dragør",
+        "Glostrup",
+        "Hvidovre",
+        "Høje-Taastrup",
+        "Ishøj",
+        "Rødovre",
+        "Tårnby",
+        "Vallensbæk"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -120,9 +233,28 @@
       "id": "oestsjaelland-oerne",
       "name": "Sundhedsråd Østsjælland og Øerne",
       "region": "oestdanmark",
-      "formand": {"name": "Torben Hollmann", "party": "A"},
-      "naestformand": {"name": "(Det Konservative Folkeparti)", "party": "C"},
-      "municipalities": ["Roskilde", "Lejre", "Solrød", "Greve", "Køge", "Stevns", "Faxe", "Næstved", "Vordingborg", "Guldborgsund", "Lolland", "Bornholm"],
+      "formand": {
+        "name": "Torben Hollmann",
+        "party": "A"
+      },
+      "naestformand": {
+        "name": "(Det Konservative Folkeparti)",
+        "party": "C"
+      },
+      "municipalities": [
+        "Roskilde",
+        "Lejre",
+        "Solrød",
+        "Greve",
+        "Køge",
+        "Stevns",
+        "Faxe",
+        "Næstved",
+        "Vordingborg",
+        "Guldborgsund",
+        "Lolland",
+        "Bornholm"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -132,9 +264,22 @@
       "id": "midt-vestsjaelland",
       "name": "Sundhedsråd Midt- og Vestsjælland",
       "region": "oestdanmark",
-      "formand": {"name": "Camilla Hove Lund", "party": "V"},
-      "naestformand": {"name": "(Enhedslisten)", "party": "Ø"},
-      "municipalities": ["Holbæk", "Odsherred", "Kalundborg", "Sorø", "Ringsted", "Slagelse"],
+      "formand": {
+        "name": "Camilla Hove Lund",
+        "party": "V"
+      },
+      "naestformand": {
+        "name": "(Enhedslisten)",
+        "party": "Ø"
+      },
+      "municipalities": [
+        "Holbæk",
+        "Odsherred",
+        "Kalundborg",
+        "Sorø",
+        "Ringsted",
+        "Slagelse"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/nyheder/region-oestdanmark/2026/foerste-moede-i-nyt-sundhedsraad-for-midt-og-vestsjaelland",
@@ -144,11 +289,29 @@
       "id": "limfjorden",
       "name": "Sundhedsråd Limfjorden",
       "region": "nordjylland",
-      "formand": {"name": "Pia Buus Pinstrup", "party": "C"},
-      "naestformand": {"name": "", "party": ""},
-      "municipalities": ["Aalborg", "Jammerbugt", "Mariagerfjord", "Morsø", "Rebild", "Thisted", "Vesthimmerland"],
+      "formand": {
+        "name": "Pia Buus Pinstrup",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
+      "municipalities": [
+        "Aalborg",
+        "Jammerbugt",
+        "Mariagerfjord",
+        "Morsø",
+        "Rebild",
+        "Thisted",
+        "Vesthimmerland"
+      ],
       "regionalMembers": [
-        {"name": "Lina Hundebøll Jespersen", "party": "V", "role": "Regionsrådsmedlem"}
+        {
+          "name": "Lina Hundebøll Jespersen",
+          "party": "V",
+          "role": "Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [],
       "referaterUrl": "https://rn.dk/politik",
@@ -158,9 +321,20 @@
       "id": "vendsyssel",
       "name": "Sundhedsråd Vendsyssel",
       "region": "nordjylland",
-      "formand": {"name": "Mogens Gade", "party": "V"},
-      "naestformand": {"name": "", "party": ""},
-      "municipalities": ["Hjørring", "Brønderslev", "Frederikshavn", "Læsø"],
+      "formand": {
+        "name": "Mogens Gade",
+        "party": "V"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
+      "municipalities": [
+        "Hjørring",
+        "Brønderslev",
+        "Frederikshavn",
+        "Læsø"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://rn.dk/politik",
@@ -170,103 +344,377 @@
       "id": "aarhus",
       "name": "Sundhedsråd Aarhus",
       "region": "midtjylland",
-      "formand": {"name": "Purnima Erichsen", "party": "C"},
-      "naestformand": {"name": "Susanne Buch", "party": "F"},
+      "formand": {
+        "name": "Purnima Erichsen",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "Susanne Buch",
+        "party": "F"
+      },
       "residents": 372000,
       "memberCount": 9,
-      "municipalities": ["Aarhus", "Samsø"],
+      "municipalities": [
+        "Aarhus",
+        "Samsø"
+      ],
       "regionalMembers": [
-        {"name": "Purnima Erichsen", "party": "C", "role": "Formand / Regionsrådsmedlem"},
-        {"name": "Susanne Buch", "party": "F", "role": "Næstformand / Regionsrådsmedlem"},
-        {"name": "Hanne Roed", "party": "B", "role": "Regionsrådsmedlem"},
-        {"name": "Nicolai Estrup", "party": "O", "role": "Regionsrådsmedlem"},
-        {"name": "Christina Kirkegaard", "party": "A", "role": "Regionsrådsmedlem"}
+        {
+          "name": "Purnima Erichsen",
+          "party": "C",
+          "role": "Formand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Susanne Buch",
+          "party": "F",
+          "role": "Næstformand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Hanne Roed",
+          "party": "B",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Nicolai Estrup",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Christina Kirkegaard",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/"
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=0788a937-0235-4348-8977-ccd7a310b18d"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=a34cb00e-d3c2-42fb-9978-833aa5e1ccca"
+        }
+      ]
     },
     {
       "id": "horsens",
       "name": "Sundhedsråd Horsens",
       "region": "midtjylland",
-      "formand": {"name": "Jacob Klærke", "party": "F"},
-      "naestformand": {"name": "", "party": ""},
-      "municipalities": ["Horsens", "Hedensted", "Odder", "Skanderborg"],
+      "formand": {
+        "name": "Jacob Klærke",
+        "party": "F"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
+      "municipalities": [
+        "Horsens",
+        "Hedensted",
+        "Odder",
+        "Skanderborg"
+      ],
       "regionalMembers": [
-        {"name": "Pernille Holm", "party": "F", "role": "Regionsrådsmedlem"},
-        {"name": "Susan Gyldenkilde", "party": "A", "role": "Regionsrådsmedlem"}
+        {
+          "name": "Pernille Holm",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Susan Gyldenkilde",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/"
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Horsens (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=482bb09b-7985-4a23-ac66-844c6e532f9f"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Horsens (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=b8c18264-a378-43d2-9719-677e2f143c5e"
+        }
+      ]
     },
     {
       "id": "kronjylland",
       "name": "Sundhedsråd Kronjylland",
       "region": "midtjylland",
-      "formand": {"name": "Jakob Søgaard Clausen", "party": "Æ"},
-      "naestformand": {"name": "Else Søjmark", "party": "A"},
+      "formand": {
+        "name": "Jakob Søgaard Clausen",
+        "party": "Æ"
+      },
+      "naestformand": {
+        "name": "Else Søjmark",
+        "party": "A"
+      },
       "residents": 230000,
       "memberCount": 11,
-      "municipalities": ["Randers", "Favrskov", "Norddjurs", "Syddjurs"],
+      "municipalities": [
+        "Randers",
+        "Favrskov",
+        "Norddjurs",
+        "Syddjurs"
+      ],
       "regionalMembers": [
-        {"name": "Jakob Søgaard Clausen", "party": "Æ", "role": "Formand / Regionsrådsmedlem"},
-        {"name": "Else Søjmark", "party": "A", "role": "Næstformand / Regionsrådsmedlem"}
+        {
+          "name": "Jakob Søgaard Clausen",
+          "party": "Æ",
+          "role": "Formand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Else Søjmark",
+          "party": "A",
+          "role": "Næstformand / Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [
-        {"name": "Nicolai Estrup", "party": "O", "municipality": "Randers"},
-        {"name": "Erik Bo Andersen", "party": "L", "municipality": "Randers"}
+        {
+          "name": "Nicolai Estrup",
+          "party": "O",
+          "municipality": "Randers"
+        },
+        {
+          "name": "Erik Bo Andersen",
+          "party": "L",
+          "municipality": "Randers"
+        }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
-      "officialUrl": "https://www.rm.dk"
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=296d8b21-9333-4b56-a59b-c1904f10f395"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=ecf89ba0-c546-490e-9aef-5a4c140706b5"
+        }
+      ]
     },
     {
       "id": "midt",
       "name": "Sundhedsråd Midt",
       "region": "midtjylland",
-      "formand": {"name": "Helle Jensen", "party": "I"},
-      "naestformand": {"name": "", "party": ""},
+      "formand": {
+        "name": "Helle Jensen",
+        "party": "I"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
       "residents": 244000,
       "memberCount": 11,
-      "municipalities": ["Viborg", "Skive", "Silkeborg"],
+      "municipalities": [
+        "Viborg",
+        "Skive",
+        "Silkeborg"
+      ],
       "regionalMembers": [
-        {"name": "Helle Jensen", "party": "I", "role": "Formand / Regionsrådsmedlem"}
+        {
+          "name": "Helle Jensen",
+          "party": "I",
+          "role": "Formand / Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [
-        {"name": "Brian Roed", "party": "A", "municipality": "Viborg"},
-        {"name": "Johannes Vesterby", "party": "V", "municipality": "Viborg"},
-        {"name": "Dorthe Schou Jensen", "party": "A", "municipality": "Silkeborg"},
-        {"name": "Lars Hansen", "party": "F", "municipality": "Silkeborg"}
+        {
+          "name": "Brian Roed",
+          "party": "A",
+          "municipality": "Viborg"
+        },
+        {
+          "name": "Johannes Vesterby",
+          "party": "V",
+          "municipality": "Viborg"
+        },
+        {
+          "name": "Dorthe Schou Jensen",
+          "party": "A",
+          "municipality": "Silkeborg"
+        },
+        {
+          "name": "Lars Hansen",
+          "party": "F",
+          "municipality": "Silkeborg"
+        }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
-      "officialUrl": "https://www.rm.dk"
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Midt (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=5b70fabc-5a6b-45f4-9f66-9f4609753a9c"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Midt (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=8ba087a4-e670-41ec-99cd-b3fc9e5bfa43"
+        }
+      ]
     },
     {
       "id": "vestjylland",
       "name": "Sundhedsråd Vestjylland",
       "region": "midtjylland",
-      "formand": {"name": "Majbritt Birkholm", "party": "O"},
-      "naestformand": {"name": "", "party": ""},
+      "formand": {
+        "name": "Majbritt Birkholm",
+        "party": "O"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
       "residents": 287000,
       "memberCount": 15,
-      "municipalities": ["Herning", "Holstebro", "Ikast-Brande", "Lemvig", "Ringkøbing-Skjern", "Struer"],
+      "municipalities": [
+        "Herning",
+        "Holstebro",
+        "Ikast-Brande",
+        "Lemvig",
+        "Ringkøbing-Skjern",
+        "Struer"
+      ],
       "regionalMembers": [
-        {"name": "Majbritt Birkholm", "party": "O", "role": "Formand / Regionsrådsmedlem (også Holstebro byråd)"}
+        {
+          "name": "Majbritt Birkholm",
+          "party": "O",
+          "role": "Formand / Regionsrådsmedlem (også Holstebro byråd)"
+        }
       ],
       "municipalMembers": [
-        {"name": "Jens Kristian Hedegaard", "party": "V", "municipality": "Holstebro", "role": "Formand for Social- og Sundhedsudvalget"}
+        {
+          "name": "Jens Kristian Hedegaard",
+          "party": "V",
+          "municipality": "Holstebro",
+          "role": "Formand for Social- og Sundhedsudvalget"
+        }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
-      "officialUrl": "https://www.rm.dk"
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
+      "referater": [
+        {
+          "title": "Dagsordner og referater",
+          "url": "https://dagsorden.rm.dk/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Video fra regionsrådets møder",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+        },
+        {
+          "title": "Udvalg og mødefora",
+          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (forberedende)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=e21e6b06-3091-43fd-9d4d-e9331cacfe45"
+        },
+        {
+          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (særligt udvalg)",
+          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=c79e1f22-cb42-444b-afcc-591f35a982fb"
+        }
+      ]
     },
     {
       "id": "fyn",
       "name": "Sundhedsråd Fyn",
       "region": "syddanmark",
-      "formand": {"name": "Annette Blynel", "party": "F"},
-      "naestformand": {"name": "Anja Lund", "party": "V"},
-      "municipalities": ["Odense", "Assens", "Faaborg-Midtfyn", "Kerteminde", "Langeland", "Middelfart", "Nordfyns", "Nyborg", "Svendborg", "Ærø"],
+      "formand": {
+        "name": "Annette Blynel",
+        "party": "F"
+      },
+      "naestformand": {
+        "name": "Anja Lund",
+        "party": "V"
+      },
+      "municipalities": [
+        "Odense",
+        "Assens",
+        "Faaborg-Midtfyn",
+        "Kerteminde",
+        "Langeland",
+        "Middelfart",
+        "Nordfyns",
+        "Nyborg",
+        "Svendborg",
+        "Ærø"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-fyn",
@@ -276,9 +724,20 @@
       "id": "lillebaelt",
       "name": "Sundhedsråd Lillebælt",
       "region": "syddanmark",
-      "formand": {"name": "Joachim Hoffmann", "party": "C"},
-      "naestformand": {"name": "Cecilie Liv Hansen", "party": "I"},
-      "municipalities": ["Kolding", "Fredericia", "Vejle", "Billund"],
+      "formand": {
+        "name": "Joachim Hoffmann",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "Cecilie Liv Hansen",
+        "party": "I"
+      },
+      "municipalities": [
+        "Kolding",
+        "Fredericia",
+        "Vejle",
+        "Billund"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-lillebaelt",
@@ -288,9 +747,20 @@
       "id": "sydvestjylland",
       "name": "Sundhedsråd Sydvestjylland",
       "region": "syddanmark",
-      "formand": {"name": "Mette With Hagensen", "party": "A"},
-      "naestformand": {"name": "Susanne Dyreborg", "party": "Æ"},
-      "municipalities": ["Esbjerg", "Fanø", "Varde", "Vejen"],
+      "formand": {
+        "name": "Mette With Hagensen",
+        "party": "A"
+      },
+      "naestformand": {
+        "name": "Susanne Dyreborg",
+        "party": "Æ"
+      },
+      "municipalities": [
+        "Esbjerg",
+        "Fanø",
+        "Varde",
+        "Vejen"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-sydvestjylland",
@@ -300,9 +770,20 @@
       "id": "soenderjylland",
       "name": "Sundhedsråd Sønderjylland",
       "region": "syddanmark",
-      "formand": {"name": "Susanne Eilersen", "party": "O"},
-      "naestformand": {"name": "Mette Bossen Linnet", "party": "V"},
-      "municipalities": ["Aabenraa", "Haderslev", "Sønderborg", "Tønder"],
+      "formand": {
+        "name": "Susanne Eilersen",
+        "party": "O"
+      },
+      "naestformand": {
+        "name": "Mette Bossen Linnet",
+        "party": "V"
+      },
+      "municipalities": [
+        "Aabenraa",
+        "Haderslev",
+        "Sønderborg",
+        "Tønder"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland",
@@ -310,19 +791,61 @@
     }
   ],
   "parties": {
-    "A": {"name": "Socialdemokratiet", "color": "#a82721"},
-    "B": {"name": "Radikale Venstre", "color": "#ff0080"},
-    "C": {"name": "Det Konservative Folkeparti", "color": "#96b226"},
-    "F": {"name": "Socialistisk Folkeparti", "color": "#bc1b8d"},
-    "I": {"name": "Liberal Alliance", "color": "#12213f"},
-    "K": {"name": "Kristendemokraterne", "color": "#8b4f9f"},
-    "L": {"name": "Lokalliste", "color": "#777777"},
-    "M": {"name": "Moderaterne", "color": "#482a7a"},
-    "O": {"name": "Dansk Folkeparti", "color": "#eac73e"},
-    "Q": {"name": "Frie Grønne", "color": "#2d9d3d"},
-    "V": {"name": "Venstre", "color": "#254264"},
-    "Æ": {"name": "Danmarksdemokraterne", "color": "#0e2a47"},
-    "Ø": {"name": "Enhedslisten", "color": "#e6352f"},
-    "Å": {"name": "Alternativet", "color": "#2b8738"}
+    "A": {
+      "name": "Socialdemokratiet",
+      "color": "#a82721"
+    },
+    "B": {
+      "name": "Radikale Venstre",
+      "color": "#ff0080"
+    },
+    "C": {
+      "name": "Det Konservative Folkeparti",
+      "color": "#96b226"
+    },
+    "F": {
+      "name": "Socialistisk Folkeparti",
+      "color": "#bc1b8d"
+    },
+    "I": {
+      "name": "Liberal Alliance",
+      "color": "#12213f"
+    },
+    "K": {
+      "name": "Kristendemokraterne",
+      "color": "#8b4f9f"
+    },
+    "L": {
+      "name": "Lokalliste",
+      "color": "#777777"
+    },
+    "M": {
+      "name": "Moderaterne",
+      "color": "#482a7a"
+    },
+    "O": {
+      "name": "Dansk Folkeparti",
+      "color": "#eac73e"
+    },
+    "Q": {
+      "name": "Frie Grønne",
+      "color": "#2d9d3d"
+    },
+    "V": {
+      "name": "Venstre",
+      "color": "#254264"
+    },
+    "Æ": {
+      "name": "Danmarksdemokraterne",
+      "color": "#0e2a47"
+    },
+    "Ø": {
+      "name": "Enhedslisten",
+      "color": "#e6352f"
+    },
+    "Å": {
+      "name": "Alternativet",
+      "color": "#2b8738"
+    }
   }
 }
