@@ -28,8 +28,7 @@
         "title": "Lex.dk: Sundhedsråd",
         "url": "https://lex.dk/sundhedsr%C3%A5d"
       }
-    ],
-    "lastScrapeRun": "2026-04-19T19:55:20.003829+00:00"
+    ]
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
@@ -81,7 +80,7 @@
       "description": "Region Hovedstaden og Region Sjælland sammenlægges til Region Østdanmark pr. 1. januar 2027. I hele 2026 fungerer regionsrådet som forberedende råd.",
       "regionsraadsformand": {
         "name": "Lars Gaardhøj",
-        "party": "S"
+        "party": "A"
       },
       "councilCount": 6,
       "website": "https://www.regionoest.dk"
@@ -151,12 +150,12 @@
       "name": "Sundhedsråd Københavns Omegn Nord",
       "region": "oestdanmark",
       "formand": {
-        "name": "(Venstre)",
+        "name": "Randi Mondorf",
         "party": "V"
       },
       "naestformand": {
-        "name": "(Moderaterne)",
-        "party": "M"
+        "name": "Stinus Lindgreen",
+        "party": "B"
       },
       "municipalities": [
         "Gentofte",
@@ -166,10 +165,123 @@
         "Rudersdal",
         "Furesø"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "regionalMembers": [
+        {
+          "name": "Randi Mondorf",
+          "party": "V",
+          "role": "Formand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Stinus Lindgreen",
+          "party": "B",
+          "role": "Næstformand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Sofie de Bretteville",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Irfan Gilani",
+          "party": "B",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Jesper Marcus",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Jacob Rosenberg",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Emilie Esmann",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Dorthe Mikkelsen",
+          "party": "I",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Pia Kjærsgaard",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Helena Hedegaard Udsen",
+          "party": "Ø",
+          "role": "Regionsrådsmedlem"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Gitte Friberg Bomholdt",
+          "party": "S",
+          "municipality": "Herlev",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Lars Green Bach",
+          "party": "B",
+          "municipality": "Ballerup",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Michael Fenger",
+          "party": "C",
+          "municipality": "Gentofte",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Serdal Benli",
+          "party": "F",
+          "municipality": "Gladsaxe",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Simon Pihl Sørensen",
+          "party": "A",
+          "municipality": "Lyngby-Taarbæk",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Britt Jensen",
+          "party": "A",
+          "municipality": "Rødovre",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Birgitte Neergaard-Kofod",
+          "party": "C",
+          "municipality": "Egedal",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Nicolai Bechfeldt",
+          "party": "V",
+          "municipality": "Furesø",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Ann Sofie Orth",
+          "party": "C",
+          "municipality": "Rudersdal",
+          "role": "Borgmester"
+        }
+      ],
       "referaterUrl": "https://www.regionoest.dk/politik",
-      "officialUrl": "https://www.regionoest.dk"
+      "officialUrl": "https://www.regionoest.dk",
+      "memberCount": 19,
+      "referater": [
+        {
+          "title": "Referat 14. januar 2026 (første møde)",
+          "url": "https://www.regionoest.dk/politik"
+        }
+      ]
     },
     {
       "id": "nordsjaelland",
@@ -387,33 +499,7 @@
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=0788a937-0235-4348-8977-ccd7a310b18d"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=a34cb00e-d3c2-42fb-9978-833aa5e1ccca"
-        }
-      ]
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/"
     },
     {
       "id": "horsens",
@@ -447,33 +533,7 @@
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Horsens (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=482bb09b-7985-4a23-ac66-844c6e532f9f"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Horsens (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=b8c18264-a378-43d2-9719-677e2f143c5e"
-        }
-      ]
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/"
     },
     {
       "id": "kronjylland",
@@ -519,34 +579,8 @@
           "municipality": "Randers"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=296d8b21-9333-4b56-a59b-c1904f10f395"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=ecf89ba0-c546-490e-9aef-5a4c140706b5"
-        }
-      ]
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
+      "officialUrl": "https://www.rm.dk"
     },
     {
       "id": "midt",
@@ -596,34 +630,8 @@
           "municipality": "Silkeborg"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Midt (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=5b70fabc-5a6b-45f4-9f66-9f4609753a9c"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Midt (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=8ba087a4-e670-41ec-99cd-b3fc9e5bfa43"
-        }
-      ]
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
+      "officialUrl": "https://www.rm.dk"
     },
     {
       "id": "vestjylland",
@@ -662,34 +670,8 @@
           "role": "Formand for Social- og Sundhedsudvalget"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=e21e6b06-3091-43fd-9d4d-e9331cacfe45"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=c79e1f22-cb42-444b-afcc-591f35a982fb"
-        }
-      ]
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
+      "officialUrl": "https://www.rm.dk"
     },
     {
       "id": "fyn",
@@ -846,6 +828,10 @@
     "Å": {
       "name": "Alternativet",
       "color": "#2b8738"
+    },
+    "S": {
+      "name": "Lokalliste / ukendt bogstav",
+      "color": "#888888"
     }
   }
 }

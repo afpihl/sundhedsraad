@@ -7,6 +7,7 @@ Et journalistisk researchværktøj der giver et hurtigt overblik over Danmarks 1
 - **`sundhedsraad.html`** — Selvstændig interaktiv hjemmeside. Dobbeltklik for at åbne i browseren.
 - **`data.json`** — Datasættet der driver siden. Kan redigeres manuelt eller opdateres automatisk af scraperen.
 - **`scraper.py`** — Python-script der henter opdaterede medlemslister og referater fra regionernes officielle sider.
+- **`udvikler-brief.docx`** — Brief til en udvikler med mail-tekst og teknisk opgavebeskrivelse.
 - **`README.md`** — Denne fil.
 
 ## Sådan kommer du i gang
@@ -80,7 +81,7 @@ Hosting via GitHub Pages vil så automatisk deploye den opdaterede side hver dag
 
 ## Datastruktur
 
-`data.json` har tre hovedsektioner:
+`data.json` har disse hovedsektioner:
 
 - **`meta`** — senest opdateret, datakilder, version
 - **`economy`** — timeline (325 mio. i 2026 → 2 mia. i 2030) og ekstra nøgletal

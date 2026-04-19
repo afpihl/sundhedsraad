@@ -47,7 +47,6 @@ import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterable
 from urllib.parse import urljoin
 
 try:
@@ -84,15 +83,14 @@ log = logging.getLogger("scraper")
 # ---------------------------------------------------------------------------
 @dataclass
 class ScrapedCouncil:
-    """Data hentet for ét sundhedsråd."""
     council_id: str
-    formand: dict | None = None          # {"name": str, "party": str}
+    formand: dict | None = None
     naestformand: dict | None = None
     regional_members: list[dict] = field(default_factory=list)
     municipal_members: list[dict] = field(default_factory=list)
     referater_url: str | None = None
     official_url: str | None = None
-    referater: list[dict] = field(default_factory=list)  # [{"title","date","url"}]
+    referater: list[dict] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -105,7 +103,7 @@ class PoliteFetcher:
         self.delay = delay_seconds
         self._last = 0.0
 
-    def get(self, url: str) -> BeautifulSoup | None:
+    def get(self, url: str):
         elapsed = time.time() - self._last
         if elapsed < self.delay:
             time.sleep(self.delay - elapsed)
@@ -127,19 +125,15 @@ class PoliteFetcher:
 # Region-adaptere
 # ---------------------------------------------------------------------------
 class BaseAdapter:
-    """Basis-klasse. Hver region implementerer fetch_all() -> list[ScrapedCouncil]."""
-
     def __init__(self, fetcher: PoliteFetcher):
         self.fetcher = fetcher
 
     def fetch_all(self) -> list[ScrapedCouncil]:
         raise NotImplementedError
 
-    # Hjælpere til parsing af danske politiker-lister
     PARTY_RE = re.compile(r"\(([A-ZÆØÅ])\)\s*$")
 
-    def split_name_party(self, text: str) -> tuple[str, str]:
-        """'Lars Gaardhøj (A)' -> ('Lars Gaardhøj', 'A')"""
+    def split_name_party(self, text: str):
         text = text.strip().replace("\xa0", " ")
         m = self.PARTY_RE.search(text)
         if not m:
@@ -147,53 +141,23 @@ class BaseAdapter:
         name = self.PARTY_RE.sub("", text).strip(" ,.")
         return name, m.group(1)
 
-
-class RegionMidtjyllandAdapter(BaseAdapter):
-    """
-    Region Midtjylland: 5 sundhedsråd — Aarhus, Horsens, Kronjylland, Midt, Vestjylland.
-    Hver har egen side under rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/.
-    """
-    BASE = "https://www.rm.dk"
-    COUNCIL_URLS = {
-        "aarhus":     f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
-        "horsens":    f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
-        "kronjylland":f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
-        "midt":       f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
-        "vestjylland":f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
-    }
-
-    def fetch_all(self) -> list[ScrapedCouncil]:
-        results = []
-        for cid, url in self.COUNCIL_URLS.items():
-            log.info("[RM] Fetching %s", cid)
-            soup = self.fetcher.get(url)
-            if not soup:
-                continue
-            council = ScrapedCouncil(council_id=cid, official_url=url, referater_url=url)
-            council = self._parse_council_page(soup, council)
-            results.append(council)
-        return results
-
-    def _parse_council_page(self, soup: BeautifulSoup, council: ScrapedCouncil) -> ScrapedCouncil:
-        # Heuristik: leder efter sektion med "medlemmer" eller liste under politikere.
-        # Regionens sider ændrer sig, så vi tager enhver liste der ligner medlemmer.
+    def parse_council_page(self, soup, council: ScrapedCouncil) -> ScrapedCouncil:
         members = self._extract_members(soup)
         for m in members:
-            if "formand" in (m.get("role") or "").lower() and "næst" not in m["role"].lower():
+            role = (m.get("role") or "").lower()
+            if "formand" in role and "næst" not in role:
                 council.formand = {"name": m["name"], "party": m["party"]}
-            elif "næstformand" in (m.get("role") or "").lower():
+            elif "næstformand" in role:
                 council.naestformand = {"name": m["name"], "party": m["party"]}
             if m.get("origin") == "municipal":
                 council.municipal_members.append(m)
             else:
                 council.regional_members.append(m)
-        # Hent eventuelle referatlinks (pdf/dagsorden)
         council.referater = self._extract_referater(soup, council.official_url or "")
         return council
 
-    def _extract_members(self, soup: BeautifulSoup) -> list[dict]:
+    def _extract_members(self, soup) -> list[dict]:
         out: list[dict] = []
-        # Led efter <h2|h3> som indeholder 'medlemmer' og tag efterfølgende liste
         for header in soup.find_all(["h2", "h3", "h4"]):
             if "medlem" in header.get_text(strip=True).lower():
                 sib = header.find_next_sibling()
@@ -213,7 +177,7 @@ class RegionMidtjyllandAdapter(BaseAdapter):
                     sib = sib.find_next_sibling()
         return out
 
-    def _extract_referater(self, soup: BeautifulSoup, base: str) -> list[dict]:
+    def _extract_referater(self, soup, base: str) -> list[dict]:
         referater = []
         for a in soup.find_all("a"):
             href = a.get("href", "")
@@ -228,8 +192,30 @@ class RegionMidtjyllandAdapter(BaseAdapter):
         return referater[:20]
 
 
+class RegionMidtjyllandAdapter(BaseAdapter):
+    BASE = "https://www.rm.dk"
+    COUNCIL_URLS = {
+        "aarhus":     f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
+        "horsens":    f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
+        "kronjylland":f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
+        "midt":       f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
+        "vestjylland":f"{BASE}/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
+    }
+
+    def fetch_all(self) -> list[ScrapedCouncil]:
+        results = []
+        for cid, url in self.COUNCIL_URLS.items():
+            log.info("[RM] Fetching %s", cid)
+            soup = self.fetcher.get(url)
+            if not soup:
+                continue
+            council = ScrapedCouncil(council_id=cid, official_url=url, referater_url=url)
+            council = self.parse_council_page(soup, council)
+            results.append(council)
+        return results
+
+
 class RegionSyddanmarkAdapter(BaseAdapter):
-    """Region Syddanmark: 4 sundhedsråd."""
     BASE = "https://regionsyddanmark.dk"
     COUNCIL_URLS = {
         "fyn":            f"{BASE}/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn",
@@ -246,14 +232,12 @@ class RegionSyddanmarkAdapter(BaseAdapter):
             if not soup:
                 continue
             council = ScrapedCouncil(council_id=cid, official_url=url, referater_url=url)
-            # Samme pragmatiske tilgang som RM
-            council = RegionMidtjyllandAdapter._parse_council_page(self, soup, council)  # genbrug
+            council = self.parse_council_page(soup, council)
             results.append(council)
         return results
 
 
 class RegionNordjyllandAdapter(BaseAdapter):
-    """Region Nordjylland: 2 sundhedsråd — Limfjorden, Vendsyssel."""
     BASE = "https://rn.dk"
     COUNCIL_URLS = {
         "limfjorden": f"{BASE}/politik/sundhedsraad/sundhedsraad-limfjorden",
@@ -268,13 +252,12 @@ class RegionNordjyllandAdapter(BaseAdapter):
             if not soup:
                 continue
             council = ScrapedCouncil(council_id=cid, official_url=url, referater_url=url)
-            council = RegionMidtjyllandAdapter._parse_council_page(self, soup, council)
+            council = self.parse_council_page(soup, council)
             results.append(council)
         return results
 
 
 class RegionOestdanmarkAdapter(BaseAdapter):
-    """Region Østdanmark: 6 sundhedsråd (forberedende i 2026)."""
     BASE = "https://www.regionoest.dk"
     COUNCIL_URLS = {
         "hovedstaden":           f"{BASE}/politik/sundhedsraad/hovedstaden",
@@ -293,7 +276,7 @@ class RegionOestdanmarkAdapter(BaseAdapter):
             if not soup:
                 continue
             council = ScrapedCouncil(council_id=cid, official_url=url, referater_url=url)
-            council = RegionMidtjyllandAdapter._parse_council_page(self, soup, council)
+            council = self.parse_council_page(soup, council)
             results.append(council)
         return results
 
@@ -309,7 +292,6 @@ def load_data() -> dict:
 
 
 def save_data(data: dict) -> None:
-    # Backup
     ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     backup = DATA_PATH.with_name(f"data.json.backup.{ts}")
     shutil.copy(DATA_PATH, backup)
@@ -322,10 +304,6 @@ def save_data(data: dict) -> None:
 
 
 def merge_council(existing: dict, scraped: ScrapedCouncil) -> dict:
-    """Flet scraped data ind over eksisterende råd.
-
-    Politik: scraper-data vinder hvis det er non-empty; ellers bevares eksisterende.
-    Dette betyder at manuelle data ikke overskrives af tomt scrape-resultat."""
     if scraped.formand and scraped.formand.get("name"):
         existing["formand"] = scraped.formand
     if scraped.naestformand and scraped.naestformand.get("name"):

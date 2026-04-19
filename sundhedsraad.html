@@ -7,279 +7,100 @@
 <meta name="description" content="Interaktiv oversigt over Danmarks 17 sundhedsråd, deltagere, regioner og økonomi.">
 <style>
   :root {
-    --bg: #f6f7f9;
-    --surface: #ffffff;
-    --border: #e3e6eb;
-    --text: #1a1f2e;
-    --muted: #5a6375;
-    --accent: #0b5394;
-    --accent-dark: #073f72;
-    --accent-light: #e8f0fb;
-    --warn: #b35900;
-    --warn-bg: #fff4e6;
-    --ok: #1f7a3a;
-    --chip-bg: #f1f3f6;
+    --bg: #f6f7f9; --surface: #ffffff; --border: #e3e6eb; --text: #1a1f2e;
+    --muted: #5a6375; --accent: #0b5394; --accent-dark: #073f72; --accent-light: #e8f0fb;
+    --warn: #b35900; --warn-bg: #fff4e6; --chip-bg: #f1f3f6;
     --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
-  header.top {
-    background: linear-gradient(135deg, #0b5394 0%, #073f72 100%);
-    color: white;
-    padding: 40px 24px 32px;
-    border-bottom: 1px solid var(--border);
-  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  header.top { background: linear-gradient(135deg, #0b5394 0%, #073f72 100%); color: white; padding: 40px 24px 32px; border-bottom: 1px solid var(--border); }
   .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-  header.top .container { padding: 0 24px; }
-  header.top h1 {
-    margin: 0 0 8px; font-size: 32px; font-weight: 700; letter-spacing: -0.02em;
-  }
-  header.top p.subtitle {
-    margin: 0; font-size: 16px; opacity: 0.92; max-width: 760px;
-  }
-  header.top .meta {
-    margin-top: 20px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; opacity: 0.85;
-  }
-  header.top .meta span strong { font-weight: 600; }
-
-  nav.tabs {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 10;
-  }
+  header.top h1 { margin: 0 0 8px; font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+  header.top p.subtitle { margin: 0; font-size: 16px; opacity: 0.92; max-width: 760px; }
+  header.top .meta { margin-top: 20px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; opacity: 0.85; }
+  nav.tabs { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
   nav.tabs .container { display: flex; gap: 4px; overflow-x: auto; }
-  nav.tabs button {
-    background: transparent; border: none; padding: 16px 18px;
-    font-size: 14px; font-weight: 500; color: var(--muted);
-    cursor: pointer; border-bottom: 2px solid transparent;
-    white-space: nowrap; transition: color .15s, border-color .15s;
-    font-family: inherit;
-  }
+  nav.tabs button { background: transparent; border: none; padding: 16px 18px; font-size: 14px; font-weight: 500; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: color .15s, border-color .15s; font-family: inherit; }
   nav.tabs button:hover { color: var(--text); }
   nav.tabs button.active { color: var(--accent); border-bottom-color: var(--accent); }
-
   main { padding: 32px 0 64px; }
   section.view { display: none; }
   section.view.active { display: block; }
-
   h2 { font-size: 22px; margin: 0 0 16px; letter-spacing: -0.01em; }
   h3 { font-size: 17px; margin: 0 0 8px; }
   p.lead { color: var(--muted); max-width: 780px; margin: 0 0 24px; }
-
-  /* Summary cards on overview */
   .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 32px; }
-  .summary-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 20px; box-shadow: var(--shadow);
-  }
+  .summary-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); cursor: pointer; }
   .summary-card .num { font-size: 32px; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; }
   .summary-card .lbl { color: var(--muted); font-size: 13px; margin-top: 4px; }
-
-  /* Filter bar */
-  .filters {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 14px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-  }
-  .filters input[type="search"] {
-    flex: 1; min-width: 220px; padding: 10px 12px; border: 1px solid var(--border);
-    border-radius: 8px; font-size: 14px; font-family: inherit;
-  }
+  .filters { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .filters input[type="search"] { flex: 1; min-width: 220px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; }
   .filters input[type="search"]:focus { outline: 2px solid var(--accent-light); border-color: var(--accent); }
-  .filters select {
-    padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px;
-    font-size: 14px; background: white; font-family: inherit;
-  }
+  .filters select { padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; background: white; font-family: inherit; }
   .filters .count { color: var(--muted); font-size: 13px; margin-left: auto; }
-
-  /* Council grid */
-  .council-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;
-  }
-  .council-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 18px; cursor: pointer; transition: transform .1s, box-shadow .1s, border-color .1s;
-    display: flex; flex-direction: column; gap: 10px;
-  }
+  .council-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .council-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; cursor: pointer; transition: transform .1s, box-shadow .1s, border-color .1s; display: flex; flex-direction: column; gap: 10px; }
   .council-card:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-1px); }
-  .council-card .region-tag {
-    display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent);
-    background: var(--accent-light); padding: 2px 8px; border-radius: 4px; width: fit-content;
-    letter-spacing: 0.02em; text-transform: uppercase;
-  }
+  .council-card .region-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-light); padding: 2px 8px; border-radius: 4px; width: fit-content; letter-spacing: 0.02em; text-transform: uppercase; }
   .council-card h3 { margin: 0; font-size: 16px; color: var(--text); }
   .council-card .formand { font-size: 13px; color: var(--muted); }
   .council-card .formand strong { color: var(--text); font-weight: 500; }
   .council-card .municipalities { font-size: 12px; color: var(--muted); line-height: 1.5; }
-  .party-chip {
-    display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px;
-    border-radius: 3px; color: white; margin-left: 4px; vertical-align: middle;
-  }
-
-  /* Region cards */
-  .region-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;
-  }
-  .region-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 22px; box-shadow: var(--shadow);
-  }
+  .party-chip { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 3px; color: white; margin-left: 4px; vertical-align: middle; }
+  .region-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .region-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px; box-shadow: var(--shadow); }
   .region-card h3 { font-size: 19px; }
-  .region-card .status {
-    display: inline-block; font-size: 12px; padding: 3px 9px; border-radius: 4px;
-    background: var(--chip-bg); color: var(--muted); margin-bottom: 10px;
-  }
+  .region-card .status { display: inline-block; font-size: 12px; padding: 3px 9px; border-radius: 4px; background: var(--chip-bg); color: var(--muted); margin-bottom: 10px; }
   .region-card .status.preparing { background: var(--warn-bg); color: var(--warn); }
   .region-card p { font-size: 14px; color: var(--muted); margin: 8px 0; }
-  .region-card .formand-block {
-    background: var(--bg); border-radius: 8px; padding: 12px; margin-top: 12px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
+  .region-card .formand-block { background: var(--bg); border-radius: 8px; padding: 12px; margin-top: 12px; display: flex; justify-content: space-between; align-items: center; }
   .region-card .formand-block .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
   .region-card .formand-block .name { font-size: 15px; font-weight: 600; margin-top: 2px; }
-
-  /* Economy view */
-  .timeline {
-    position: relative; padding: 20px 0;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 24px;
-  }
-  .timeline-bar {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: end;
-    height: 220px; margin: 16px 0 8px;
-  }
-  .timeline-bar .bar {
-    background: linear-gradient(to top, var(--accent) 0%, #4a90d9 100%);
-    border-radius: 6px 6px 0 0; position: relative; transition: all .2s;
-    cursor: pointer;
-  }
+  .timeline { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .timeline-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: end; height: 220px; margin: 16px 0 8px; }
+  .timeline-bar .bar { background: linear-gradient(to top, var(--accent) 0%, #4a90d9 100%); border-radius: 6px 6px 0 0; position: relative; transition: all .2s; cursor: pointer; }
   .timeline-bar .bar:hover { filter: brightness(1.1); }
-  .timeline-bar .bar .val {
-    position: absolute; top: -22px; left: 0; right: 0; text-align: center;
-    font-size: 12px; font-weight: 600; color: var(--text);
-  }
-  .timeline-labels {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;
-    font-size: 13px; color: var(--muted); text-align: center; font-weight: 500;
-  }
-  .timeline-note {
-    margin-top: 20px; padding: 14px; background: var(--accent-light);
-    border-radius: 8px; font-size: 13px; color: var(--text);
-  }
-  .timeline-note.hidden { display: none; }
+  .timeline-bar .bar .val { position: absolute; top: -22px; left: 0; right: 0; text-align: center; font-size: 12px; font-weight: 600; color: var(--text); }
+  .timeline-labels { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; font-size: 13px; color: var(--muted); text-align: center; font-weight: 500; }
+  .timeline-note { margin-top: 20px; padding: 14px; background: var(--accent-light); border-radius: 8px; font-size: 13px; color: var(--text); }
   .timeline-note strong { color: var(--accent-dark); }
-
-  .econ-extra {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px; margin-top: 20px;
-  }
-  .econ-extra .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px;
-  }
+  .econ-extra { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 20px; }
+  .econ-extra .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
   .econ-extra .card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
   .econ-extra .card .val { font-size: 22px; font-weight: 700; color: var(--accent); margin: 4px 0; }
   .econ-extra .card .note { font-size: 13px; color: var(--muted); }
-
-  /* Modal */
-  .modal-backdrop {
-    display: none; position: fixed; inset: 0; background: rgba(26,31,46,0.6);
-    z-index: 100; padding: 20px; overflow-y: auto; animation: fadeIn .15s;
-  }
+  .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(26,31,46,0.6); z-index: 100; padding: 20px; overflow-y: auto; }
   .modal-backdrop.open { display: flex; align-items: flex-start; justify-content: center; }
-  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-  .modal {
-    background: white; border-radius: 14px; max-width: 760px; width: 100%;
-    margin: 40px auto; box-shadow: 0 8px 32px rgba(0,0,0,0.2); overflow: hidden;
-  }
-  .modal-header {
-    padding: 24px 28px 16px; border-bottom: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: start; gap: 16px;
-  }
+  .modal { background: white; border-radius: 14px; max-width: 760px; width: 100%; margin: 40px auto; box-shadow: 0 8px 32px rgba(0,0,0,0.2); overflow: hidden; }
+  .modal-header { padding: 24px 28px 16px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: start; gap: 16px; }
   .modal-header h2 { margin: 0; font-size: 22px; }
-  .modal-header .region-tag {
-    display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent);
-    background: var(--accent-light); padding: 2px 8px; border-radius: 4px;
-    letter-spacing: 0.02em; text-transform: uppercase; margin-bottom: 6px;
-  }
-  .modal-header .close {
-    background: transparent; border: none; font-size: 28px; cursor: pointer;
-    color: var(--muted); line-height: 1; padding: 0 4px;
-  }
+  .modal-header .region-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-light); padding: 2px 8px; border-radius: 4px; letter-spacing: 0.02em; text-transform: uppercase; margin-bottom: 6px; }
+  .modal-header .close { background: transparent; border: none; font-size: 28px; cursor: pointer; color: var(--muted); line-height: 1; padding: 0 4px; }
   .modal-body { padding: 20px 28px 28px; }
-  .modal-body h4 {
-    font-size: 13px; color: var(--muted); text-transform: uppercase;
-    letter-spacing: 0.04em; margin: 18px 0 8px; font-weight: 600;
-  }
+  .modal-body h4 { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin: 18px 0 8px; font-weight: 600; }
   .modal-body h4:first-child { margin-top: 0; }
-  .leaderboard {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px;
-  }
-  .leaderboard .role-card {
-    background: var(--bg); padding: 12px 14px; border-radius: 8px;
-  }
+  .leaderboard { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px; }
+  .leaderboard .role-card { background: var(--bg); padding: 12px 14px; border-radius: 8px; }
   .leaderboard .role-card .role { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
   .leaderboard .role-card .name { font-size: 15px; font-weight: 600; margin-top: 3px; }
   .member-list { list-style: none; padding: 0; margin: 0; }
-  .member-list li {
-    padding: 8px 0; border-bottom: 1px solid var(--border); display: flex;
-    justify-content: space-between; align-items: center; font-size: 14px;
-  }
+  .member-list li { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
   .member-list li:last-child { border-bottom: none; }
   .member-list .mem-role { font-size: 12px; color: var(--muted); }
-  .modal-links {
-    margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);
-    display: flex; gap: 10px; flex-wrap: wrap;
-  }
-  .modal-links a {
-    display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px;
-    background: var(--accent); color: white; text-decoration: none; border-radius: 8px;
-    font-size: 13px; font-weight: 500;
-  }
+  .modal-links { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; flex-wrap: wrap; }
+  .modal-links a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; }
   .modal-links a.secondary { background: var(--chip-bg); color: var(--text); }
-  .modal-links a:hover { filter: brightness(1.1); }
-
-  .empty-note {
-    padding: 12px; background: var(--warn-bg); color: var(--warn);
-    border-radius: 8px; font-size: 13px; margin-top: 8px;
-  }
-
-  /* Sources view */
+  .empty-note { padding: 12px; background: var(--warn-bg); color: var(--warn); border-radius: 8px; font-size: 13px; margin-top: 8px; }
   .source-list { list-style: none; padding: 0; }
-  .source-list li {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-    padding: 14px 16px; margin-bottom: 10px;
-  }
+  .source-list li { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
   .source-list li a { color: var(--accent); text-decoration: none; font-weight: 500; }
   .source-list li a:hover { text-decoration: underline; }
-
-  /* Muni list chip */
-  .muni-chips {
-    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;
-  }
-  .muni-chips .chip {
-    background: var(--chip-bg); padding: 3px 9px; border-radius: 4px; font-size: 12px; color: var(--text);
-  }
-
-  footer {
-    padding: 24px 0; border-top: 1px solid var(--border); color: var(--muted);
-    font-size: 13px; margin-top: 40px; background: var(--surface);
-  }
-  footer p { margin: 0 0 4px; }
-
-  @media (max-width: 640px) {
-    header.top { padding: 28px 16px 24px; }
-    header.top h1 { font-size: 24px; }
-    .container { padding: 0 16px; }
-    nav.tabs button { padding: 14px 12px; font-size: 13px; }
-    .timeline-bar { height: 160px; }
-    .leaderboard { grid-template-columns: 1fr; }
-  }
+  .muni-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .muni-chips .chip { background: var(--chip-bg); padding: 3px 9px; border-radius: 4px; font-size: 12px; }
+  footer { padding: 24px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; margin-top: 40px; background: var(--surface); }
+  @media (max-width: 640px) { header.top h1 { font-size: 24px; } nav.tabs button { padding: 14px 12px; font-size: 13px; } .leaderboard { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -287,11 +108,7 @@
 <header class="top">
   <div class="container">
     <h1>Sundhedsrådene — interaktiv oversigt</h1>
-    <p class="subtitle">
-      17 nye sundhedsråd blev etableret 1. januar 2026 som en central del af sundhedsreformen.
-      De består af regionale og kommunale politikere, hvor regionspolitikerne har flertal og formandsposten,
-      og rådene refererer til regionen. Siden samler deltagere, økonomi og referater fra offentlige kilder.
-    </p>
+    <p class="subtitle">17 nye sundhedsråd blev etableret 1. januar 2026 som en central del af sundhedsreformen. De består af regionale og kommunale politikere, hvor regionspolitikerne har flertal og formandsposten, og rådene refererer til regionen.</p>
     <div class="meta">
       <span><strong>Sidst opdateret:</strong> <span id="lastUpdated">—</span></span>
       <span><strong>Datagrundlag:</strong> <span id="sourceCount">—</span> primære kilder</span>
@@ -306,60 +123,31 @@
     <button class="tab-btn" data-view="councils">De 17 sundhedsråd</button>
     <button class="tab-btn" data-view="regions">Regionerne</button>
     <button class="tab-btn" data-view="economy">Økonomi</button>
-    <button class="tab-btn" data-view="sources">Kilder & metode</button>
+    <button class="tab-btn" data-view="sources">Kilder &amp; metode</button>
   </div>
 </nav>
 
 <main>
   <div class="container">
-
-    <!-- OVERVIEW -->
     <section class="view active" id="view-overview">
       <h2>Overblik</h2>
-      <p class="lead">
-        Nøgletal og status for de 17 sundhedsråd. Klik på et tal eller en fane for at gå i dybden.
-      </p>
+      <p class="lead">Nøgletal og status for de 17 sundhedsråd. Klik på et tal eller en fane for at gå i dybden.</p>
       <div class="summary-grid">
-        <div class="summary-card" onclick="showView('councils')">
-          <div class="num">17</div>
-          <div class="lbl">Sundhedsråd i alt</div>
-        </div>
-        <div class="summary-card" onclick="showView('regions')">
-          <div class="num">4</div>
-          <div class="lbl">Regioner (fra 2027)</div>
-        </div>
-        <div class="summary-card" onclick="showView('economy')">
-          <div class="num">325&nbsp;mio.</div>
-          <div class="lbl">kr. øremærket i 2026</div>
-        </div>
-        <div class="summary-card" onclick="showView('economy')">
-          <div class="num">≈2&nbsp;mia.</div>
-          <div class="lbl">kr. årligt fra 2030</div>
-        </div>
-        <div class="summary-card">
-          <div class="num" id="muniMembersCount">119</div>
-          <div class="lbl">Kommunale politikere udpeget</div>
-        </div>
-        <div class="summary-card">
-          <div class="num" id="totalMembers">229</div>
-          <div class="lbl">Samlede medlemmer</div>
-        </div>
+        <div class="summary-card" onclick="showView('councils')"><div class="num">17</div><div class="lbl">Sundhedsråd i alt</div></div>
+        <div class="summary-card" onclick="showView('regions')"><div class="num">4</div><div class="lbl">Regioner (fra 2027)</div></div>
+        <div class="summary-card" onclick="showView('economy')"><div class="num">325&nbsp;mio.</div><div class="lbl">kr. øremærket i 2026</div></div>
+        <div class="summary-card" onclick="showView('economy')"><div class="num">≈2&nbsp;mia.</div><div class="lbl">kr. årligt fra 2030</div></div>
+        <div class="summary-card"><div class="num">119</div><div class="lbl">Kommunale politikere</div></div>
+        <div class="summary-card"><div class="num">229</div><div class="lbl">Samlede medlemmer</div></div>
       </div>
-
       <h2>Fordeling på regioner</h2>
       <div id="regionSummary" class="region-grid"></div>
-
-      <div style="margin-top:32px; padding:18px; background:var(--warn-bg); border-radius:10px; color:var(--warn); font-size:14px;">
-        <strong>Om data:</strong> Formænd, næstformænd og rådenes geografi er verificeret.
-        Fulde medlemslister bliver løbende udbygget via automatisk indlæsning fra regionernes officielle sider
-        (se fanen <em>Kilder &amp; metode</em>).
-      </div>
+      <div style="margin-top:32px; padding:18px; background:var(--warn-bg); border-radius:10px; color:var(--warn); font-size:14px;"><strong>Om data:</strong> Formænd, næstformænd og rådenes geografi er verificeret. Fulde medlemslister bliver løbende udbygget via automatisk indlæsning fra regionernes officielle sider.</div>
     </section>
 
-    <!-- COUNCILS -->
     <section class="view" id="view-councils">
       <h2>De 17 sundhedsråd</h2>
-      <p class="lead">Klik på et råd for at se formand, næstformand, regionale og kommunale medlemmer samt link til referater.</p>
+      <p class="lead">Klik på et råd for at se formand, næstformand, medlemmer og link til referater.</p>
       <div class="filters">
         <input type="search" id="searchInput" placeholder="Søg efter navn, kommune eller politiker...">
         <select id="regionFilter">
@@ -374,60 +162,37 @@
       <div class="council-grid" id="councilGrid"></div>
     </section>
 
-    <!-- REGIONS -->
     <section class="view" id="view-regions">
       <h2>De fire regioner</h2>
-      <p class="lead">
-        Region Østdanmark dannes ved sammenlægning af Region Hovedstaden og Region Sjælland pr. 1. januar 2027.
-        Sundhedsrådene refererer til regionen, og regionsrådet sætter den overordnede ramme.
-      </p>
+      <p class="lead">Region Østdanmark dannes ved sammenlægning af Region Hovedstaden og Region Sjælland pr. 1. januar 2027. Sundhedsrådene refererer til regionen.</p>
       <div id="regionDetail" class="region-grid"></div>
     </section>
 
-    <!-- ECONOMY -->
     <section class="view" id="view-economy">
       <h2>Økonomi frem mod 2030</h2>
-      <p class="lead">
-        Sundhedsrådene er et centralt redskab for at flytte midler til det kommunale sundhedsområde.
-        Beløbet optrappes fra 325 mio. kr. i 2026 til op mod 2 mia. kr. årligt i 2030 (2025-priser).
-      </p>
+      <p class="lead">Sundhedsrådene er et centralt redskab for at flytte midler til det kommunale sundhedsområde. Beløbet optrappes fra 325 mio. kr. i 2026 til op mod 2 mia. kr. årligt i 2030 (2025-priser).</p>
       <div class="timeline">
         <div class="timeline-bar" id="timelineBar"></div>
         <div class="timeline-labels" id="timelineLabels"></div>
-        <div class="timeline-note" id="timelineNote">
-          <strong>Klik på en søjle</strong> for at se noter om det enkelte år.
-        </div>
+        <div class="timeline-note" id="timelineNote"><strong>Klik på en søjle</strong> for at se noter om det enkelte år.</div>
       </div>
       <div class="econ-extra" id="econExtra"></div>
     </section>
 
-    <!-- SOURCES -->
     <section class="view" id="view-sources">
       <h2>Kilder &amp; metode</h2>
-      <p class="lead">
-        Al data på siden stammer fra offentligt tilgængelige kilder. Dataopdateres løbende via en scraper
-        (<code>scraper.py</code>), der henter referater og medlemsoplysninger fra regionernes officielle sider.
-      </p>
+      <p class="lead">Al data på siden stammer fra offentligt tilgængelige kilder. Data opdateres via en scraper (<code>scraper.py</code>).</p>
       <h3>Primære kilder</h3>
       <ul class="source-list" id="sourceList"></ul>
       <h3 style="margin-top:24px;">Automatisk opdatering</h3>
       <ul class="source-list">
-        <li>
-          <strong>scraper.py</strong> — Python-script der henter opdaterede medlemslister og referatlinks fra
-          regionernes officielle hjemmesider og opdaterer <code>data.json</code>. Kan køres manuelt eller
-          planlægges via cron / GitHub Actions (se <code>README.md</code>).
-        </li>
-        <li>
-          <strong>data.json</strong> — Datasættet der driver denne side. Version <span id="dataVersion">—</span>.
-          Kan redigeres manuelt eller opdateres automatisk af scraperen.
-        </li>
+        <li><strong>scraper.py</strong> — Python-script der henter opdaterede medlemslister og referatlinks og opdaterer <code>data.json</code>. Kan køres manuelt eller planlægges via cron / GitHub Actions.</li>
+        <li><strong>data.json</strong> — Datasættet der driver siden. Version <span id="dataVersion">—</span>.</li>
       </ul>
     </section>
-
   </div>
 </main>
 
-<!-- Modal -->
 <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
   <div class="modal" onclick="event.stopPropagation()">
     <div class="modal-header">
@@ -443,38 +208,76 @@
 
 <footer>
   <div class="container">
-    <p>Interaktiv oversigt over sundhedsrådene. Bygget som forskningsværktøj — data opdateres via <code>data.json</code>.</p>
-    <p>Ikke et officielt produkt. Verificér altid mod de primære kilder.</p>
+    <p>Interaktiv oversigt over sundhedsrådene. Ikke et officielt produkt — verificér altid mod primære kilder.</p>
   </div>
 </footer>
 
 <script>
-// ============================================================
-// Embedded fallback data (used if data.json cannot be loaded)
-// Kept identical to data.json so the HTML works offline.
-// ============================================================
 const EMBEDDED_DATA = {
   "meta": {
-    "lastUpdated": "2026-04-17",
+    "lastUpdated": "2026-04-19",
     "dataVersion": "0.1.0",
     "note": "Foreløbig datasæt. Formænd, næstformænd og regioner er verificeret via offentlige kilder. Fuld medlemsliste kræver scraping af regionernes officielle sider — se scraper.py.",
     "sources": [
-      {"title": "Aftale om regionernes økonomi for 2026 (FM.dk)", "url": "https://fm.dk/media/oycane2j/aftale-om-regionernes-oekonomi-for-2026-a.pdf"},
-      {"title": "Indenrigs- og Sundhedsministeriet: De nye sundhedsråd", "url": "https://www.ism.dk/temaer/sundhedsreformen-2024/sundhedsraad"},
-      {"title": "Danske Regioner: Ny organisering", "url": "https://www.regioner.dk/sundhedsreform/viden-om-sundhedsreformen/ny-organisering-af-sundhedsvaesenet/"},
-      {"title": "KL: Kommunale medlemmer af sundhedsrådene", "url": "https://www.kl.dk/forsidenyheder/2026/januar/her-er-de-kommunale-medlemmer-af-sundhedsraadene"},
-      {"title": "Ældre Sagen: De 17 sundhedsråds hjemmesider", "url": "https://www.aeldresagen.dk/frivilligportalen/frivilligomraader/lokal-indflydelse/aeldre--og-sundhedsudvalg/de-17-sundhedsraads-hjemmesider"},
-      {"title": "Lex.dk: Sundhedsråd", "url": "https://lex.dk/sundhedsr%C3%A5d"}
+      {
+        "title": "Aftale om regionernes økonomi for 2026 (FM.dk)",
+        "url": "https://fm.dk/media/oycane2j/aftale-om-regionernes-oekonomi-for-2026-a.pdf"
+      },
+      {
+        "title": "Indenrigs- og Sundhedsministeriet: De nye sundhedsråd",
+        "url": "https://www.ism.dk/temaer/sundhedsreformen-2024/sundhedsraad"
+      },
+      {
+        "title": "Danske Regioner: Ny organisering",
+        "url": "https://www.regioner.dk/sundhedsreform/viden-om-sundhedsreformen/ny-organisering-af-sundhedsvaesenet/"
+      },
+      {
+        "title": "KL: Kommunale medlemmer af sundhedsrådene",
+        "url": "https://www.kl.dk/forsidenyheder/2026/januar/her-er-de-kommunale-medlemmer-af-sundhedsraadene"
+      },
+      {
+        "title": "Ældre Sagen: De 17 sundhedsråds hjemmesider",
+        "url": "https://www.aeldresagen.dk/frivilligportalen/frivilligomraader/lokal-indflydelse/aeldre--og-sundhedsudvalg/de-17-sundhedsraads-hjemmesider"
+      },
+      {
+        "title": "Lex.dk: Sundhedsråd",
+        "url": "https://lex.dk/sundhedsr%C3%A5d"
+      }
     ]
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
     "timeline": [
-      {"year": 2026, "amountMio": 325, "label": "325 mio. kr.", "note": "Øremærket implementering af sundhedsreform — patientrettet forebyggelse og akutsygepleje. Sundhedsrådene fungerer som forberedende råd."},
-      {"year": 2027, "amountMio": 600, "label": "ca. 600 mio. kr.", "note": "Knap 0,6 mia. kr. til kommunalt sundhedsområde via sundhedsrådene. Fuld sundhedsrådsstruktur træder i kraft."},
-      {"year": 2028, "amountMio": 1100, "label": "ca. 1,1 mia. kr.", "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."},
-      {"year": 2029, "amountMio": 1550, "label": "ca. 1,55 mia. kr.", "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."},
-      {"year": 2030, "amountMio": 2000, "label": "op mod 2 mia. kr.", "note": "Fuldt niveau (2025-priser) til kommunale sundhedsindsatser via de 17 sundhedsråd."}
+      {
+        "year": 2026,
+        "amountMio": 325,
+        "label": "325 mio. kr.",
+        "note": "Øremærket implementering af sundhedsreform — patientrettet forebyggelse og akutsygepleje. Sundhedsrådene fungerer som forberedende råd."
+      },
+      {
+        "year": 2027,
+        "amountMio": 600,
+        "label": "ca. 600 mio. kr.",
+        "note": "Knap 0,6 mia. kr. til kommunalt sundhedsområde via sundhedsrådene. Fuld sundhedsrådsstruktur træder i kraft."
+      },
+      {
+        "year": 2028,
+        "amountMio": 1100,
+        "label": "ca. 1,1 mia. kr.",
+        "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."
+      },
+      {
+        "year": 2029,
+        "amountMio": 1550,
+        "label": "ca. 1,55 mia. kr.",
+        "note": "Optrapning mod fuldt niveau (skønnet, lineær fremskrivning)."
+      },
+      {
+        "year": 2030,
+        "amountMio": 2000,
+        "label": "op mod 2 mia. kr.",
+        "note": "Fuldt niveau (2025-priser) til kommunale sundhedsindsatser via de 17 sundhedsråd."
+      }
     ],
     "additional": {
       "operationsLift2026Mia": 2.3,
@@ -490,7 +293,10 @@ const EMBEDDED_DATA = {
       "status": "Forberedende i 2026 — fuld status 1. januar 2027",
       "fullLaunch": "2027-01-01",
       "description": "Region Hovedstaden og Region Sjælland sammenlægges til Region Østdanmark pr. 1. januar 2027. I hele 2026 fungerer regionsrådet som forberedende råd.",
-      "regionsraadsformand": {"name": "Lars Gaardhøj", "party": "S"},
+      "regionsraadsformand": {
+        "name": "Lars Gaardhøj",
+        "party": "A"
+      },
       "councilCount": 6,
       "website": "https://www.regionoest.dk"
     },
@@ -499,7 +305,10 @@ const EMBEDDED_DATA = {
       "name": "Region Nordjylland",
       "status": "Aktiv",
       "description": "Region Nordjylland fortsætter som selvstændig region. Regionsrådsformanden er også ny formand for Danske Regioner.",
-      "regionsraadsformand": {"name": "Mads Duedahl", "party": "V"},
+      "regionsraadsformand": {
+        "name": "Mads Duedahl",
+        "party": "V"
+      },
       "councilCount": 2,
       "website": "https://rn.dk"
     },
@@ -508,7 +317,10 @@ const EMBEDDED_DATA = {
       "name": "Region Midtjylland",
       "status": "Aktiv",
       "description": "Region Midtjylland har fem sundhedsråd — flest i landet efter Østdanmark.",
-      "regionsraadsformand": {"name": "Anders G. Christensen", "party": "V"},
+      "regionsraadsformand": {
+        "name": "Anders G. Christensen",
+        "party": "V"
+      },
       "councilCount": 5,
       "website": "https://www.rm.dk"
     },
@@ -517,7 +329,10 @@ const EMBEDDED_DATA = {
       "name": "Region Syddanmark",
       "status": "Aktiv",
       "description": "Region Syddanmark har fire sundhedsråd dækkende Fyn, Lillebælt, Sydvestjylland og Sønderjylland.",
-      "regionsraadsformand": {"name": "Bo Libergren", "party": "V"},
+      "regionsraadsformand": {
+        "name": "Bo Libergren",
+        "party": "V"
+      },
       "councilCount": 4,
       "website": "https://regionsyddanmark.dk"
     }
@@ -527,9 +342,19 @@ const EMBEDDED_DATA = {
       "id": "hovedstaden",
       "name": "Sundhedsråd Hovedstaden",
       "region": "oestdanmark",
-      "formand": {"name": "(Radikale Venstre)", "party": "B", "note": "Navn ikke bekræftet i denne version"},
-      "naestformand": {"name": "(Socialdemokratiet)", "party": "A"},
-      "municipalities": ["Københavns Kommune", "Frederiksberg"],
+      "formand": {
+        "name": "(Radikale Venstre)",
+        "party": "B",
+        "note": "Navn ikke bekræftet i denne version"
+      },
+      "naestformand": {
+        "name": "(Socialdemokratiet)",
+        "party": "A"
+      },
+      "municipalities": [
+        "Københavns Kommune",
+        "Frederiksberg"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -539,21 +364,163 @@ const EMBEDDED_DATA = {
       "id": "koebenhavns-omegn-nord",
       "name": "Sundhedsråd Københavns Omegn Nord",
       "region": "oestdanmark",
-      "formand": {"name": "(Venstre)", "party": "V"},
-      "naestformand": {"name": "(Moderaterne)", "party": "M"},
-      "municipalities": ["Gentofte", "Gladsaxe", "Herlev", "Lyngby-Taarbæk", "Rudersdal", "Furesø"],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "formand": {
+        "name": "Randi Mondorf",
+        "party": "V"
+      },
+      "naestformand": {
+        "name": "Stinus Lindgreen",
+        "party": "B"
+      },
+      "municipalities": [
+        "Gentofte",
+        "Gladsaxe",
+        "Herlev",
+        "Lyngby-Taarbæk",
+        "Rudersdal",
+        "Furesø"
+      ],
+      "regionalMembers": [
+        {
+          "name": "Randi Mondorf",
+          "party": "V",
+          "role": "Formand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Stinus Lindgreen",
+          "party": "B",
+          "role": "Næstformand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Sofie de Bretteville",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Irfan Gilani",
+          "party": "B",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Jesper Marcus",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Jacob Rosenberg",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Emilie Esmann",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Dorthe Mikkelsen",
+          "party": "I",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Pia Kjærsgaard",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Helena Hedegaard Udsen",
+          "party": "Ø",
+          "role": "Regionsrådsmedlem"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Gitte Friberg Bomholdt",
+          "party": "S",
+          "municipality": "Herlev",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Lars Green Bach",
+          "party": "B",
+          "municipality": "Ballerup",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Michael Fenger",
+          "party": "C",
+          "municipality": "Gentofte",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Serdal Benli",
+          "party": "F",
+          "municipality": "Gladsaxe",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Simon Pihl Sørensen",
+          "party": "A",
+          "municipality": "Lyngby-Taarbæk",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Britt Jensen",
+          "party": "A",
+          "municipality": "Rødovre",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Birgitte Neergaard-Kofod",
+          "party": "C",
+          "municipality": "Egedal",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Nicolai Bechfeldt",
+          "party": "V",
+          "municipality": "Furesø",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Ann Sofie Orth",
+          "party": "C",
+          "municipality": "Rudersdal",
+          "role": "Borgmester"
+        }
+      ],
       "referaterUrl": "https://www.regionoest.dk/politik",
-      "officialUrl": "https://www.regionoest.dk"
+      "officialUrl": "https://www.regionoest.dk",
+      "memberCount": 19,
+      "referater": [
+        {
+          "title": "Referat 14. januar 2026 (første møde)",
+          "url": "https://www.regionoest.dk/politik"
+        }
+      ]
     },
     {
       "id": "nordsjaelland",
       "name": "Sundhedsråd Nordsjælland",
       "region": "oestdanmark",
-      "formand": {"name": "(Det Konservative Folkeparti)", "party": "C"},
-      "naestformand": {"name": "(Venstre)", "party": "V"},
-      "municipalities": ["Allerød", "Egedal", "Fredensborg", "Frederikssund", "Gribskov", "Halsnæs", "Helsingør", "Hillerød", "Hørsholm"],
+      "formand": {
+        "name": "(Det Konservative Folkeparti)",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "(Venstre)",
+        "party": "V"
+      },
+      "municipalities": [
+        "Allerød",
+        "Egedal",
+        "Fredensborg",
+        "Frederikssund",
+        "Gribskov",
+        "Halsnæs",
+        "Helsingør",
+        "Hillerød",
+        "Hørsholm"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -563,9 +530,27 @@ const EMBEDDED_DATA = {
       "id": "amager-vestegnen",
       "name": "Sundhedsråd Amager og Vestegnen",
       "region": "oestdanmark",
-      "formand": {"name": "(Enhedslisten)", "party": "Ø"},
-      "naestformand": {"name": "(Socialdemokratiet)", "party": "A"},
-      "municipalities": ["Albertslund", "Ballerup", "Brøndby", "Dragør", "Glostrup", "Hvidovre", "Høje-Taastrup", "Ishøj", "Rødovre", "Tårnby", "Vallensbæk"],
+      "formand": {
+        "name": "(Enhedslisten)",
+        "party": "Ø"
+      },
+      "naestformand": {
+        "name": "(Socialdemokratiet)",
+        "party": "A"
+      },
+      "municipalities": [
+        "Albertslund",
+        "Ballerup",
+        "Brøndby",
+        "Dragør",
+        "Glostrup",
+        "Hvidovre",
+        "Høje-Taastrup",
+        "Ishøj",
+        "Rødovre",
+        "Tårnby",
+        "Vallensbæk"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -575,9 +560,28 @@ const EMBEDDED_DATA = {
       "id": "oestsjaelland-oerne",
       "name": "Sundhedsråd Østsjælland og Øerne",
       "region": "oestdanmark",
-      "formand": {"name": "Torben Hollmann", "party": "A"},
-      "naestformand": {"name": "(Det Konservative Folkeparti)", "party": "C"},
-      "municipalities": ["Roskilde", "Lejre", "Solrød", "Greve", "Køge", "Stevns", "Faxe", "Næstved", "Vordingborg", "Guldborgsund", "Lolland", "Bornholm"],
+      "formand": {
+        "name": "Torben Hollmann",
+        "party": "A"
+      },
+      "naestformand": {
+        "name": "(Det Konservative Folkeparti)",
+        "party": "C"
+      },
+      "municipalities": [
+        "Roskilde",
+        "Lejre",
+        "Solrød",
+        "Greve",
+        "Køge",
+        "Stevns",
+        "Faxe",
+        "Næstved",
+        "Vordingborg",
+        "Guldborgsund",
+        "Lolland",
+        "Bornholm"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/politik",
@@ -587,9 +591,22 @@ const EMBEDDED_DATA = {
       "id": "midt-vestsjaelland",
       "name": "Sundhedsråd Midt- og Vestsjælland",
       "region": "oestdanmark",
-      "formand": {"name": "Camilla Hove Lund", "party": "V"},
-      "naestformand": {"name": "(Enhedslisten)", "party": "Ø"},
-      "municipalities": ["Holbæk", "Odsherred", "Kalundborg", "Sorø", "Ringsted", "Slagelse"],
+      "formand": {
+        "name": "Camilla Hove Lund",
+        "party": "V"
+      },
+      "naestformand": {
+        "name": "(Enhedslisten)",
+        "party": "Ø"
+      },
+      "municipalities": [
+        "Holbæk",
+        "Odsherred",
+        "Kalundborg",
+        "Sorø",
+        "Ringsted",
+        "Slagelse"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://www.regionoest.dk/nyheder/region-oestdanmark/2026/foerste-moede-i-nyt-sundhedsraad-for-midt-og-vestsjaelland",
@@ -599,11 +616,29 @@ const EMBEDDED_DATA = {
       "id": "limfjorden",
       "name": "Sundhedsråd Limfjorden",
       "region": "nordjylland",
-      "formand": {"name": "Pia Buus Pinstrup", "party": "C"},
-      "naestformand": {"name": "", "party": ""},
-      "municipalities": ["Aalborg", "Jammerbugt", "Mariagerfjord", "Morsø", "Rebild", "Thisted", "Vesthimmerland"],
+      "formand": {
+        "name": "Pia Buus Pinstrup",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
+      "municipalities": [
+        "Aalborg",
+        "Jammerbugt",
+        "Mariagerfjord",
+        "Morsø",
+        "Rebild",
+        "Thisted",
+        "Vesthimmerland"
+      ],
       "regionalMembers": [
-        {"name": "Lina Hundebøll Jespersen", "party": "V", "role": "Regionsrådsmedlem"}
+        {
+          "name": "Lina Hundebøll Jespersen",
+          "party": "V",
+          "role": "Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [],
       "referaterUrl": "https://rn.dk/politik",
@@ -613,9 +648,20 @@ const EMBEDDED_DATA = {
       "id": "vendsyssel",
       "name": "Sundhedsråd Vendsyssel",
       "region": "nordjylland",
-      "formand": {"name": "Mogens Gade", "party": "V"},
-      "naestformand": {"name": "", "party": ""},
-      "municipalities": ["Hjørring", "Brønderslev", "Frederikshavn", "Læsø"],
+      "formand": {
+        "name": "Mogens Gade",
+        "party": "V"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
+      "municipalities": [
+        "Hjørring",
+        "Brønderslev",
+        "Frederikshavn",
+        "Læsø"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://rn.dk/politik",
@@ -625,17 +671,46 @@ const EMBEDDED_DATA = {
       "id": "aarhus",
       "name": "Sundhedsråd Aarhus",
       "region": "midtjylland",
-      "formand": {"name": "Purnima Erichsen", "party": "C"},
-      "naestformand": {"name": "Susanne Buch", "party": "F"},
+      "formand": {
+        "name": "Purnima Erichsen",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "Susanne Buch",
+        "party": "F"
+      },
       "residents": 372000,
       "memberCount": 9,
-      "municipalities": ["Aarhus", "Samsø"],
+      "municipalities": [
+        "Aarhus",
+        "Samsø"
+      ],
       "regionalMembers": [
-        {"name": "Purnima Erichsen", "party": "C", "role": "Formand / Regionsrådsmedlem"},
-        {"name": "Susanne Buch", "party": "F", "role": "Næstformand / Regionsrådsmedlem"},
-        {"name": "Hanne Roed", "party": "B", "role": "Regionsrådsmedlem"},
-        {"name": "Nicolai Estrup", "party": "O", "role": "Regionsrådsmedlem"},
-        {"name": "Christina Kirkegaard", "party": "A", "role": "Regionsrådsmedlem"}
+        {
+          "name": "Purnima Erichsen",
+          "party": "C",
+          "role": "Formand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Susanne Buch",
+          "party": "F",
+          "role": "Næstformand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Hanne Roed",
+          "party": "B",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Nicolai Estrup",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Christina Kirkegaard",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
@@ -645,12 +720,31 @@ const EMBEDDED_DATA = {
       "id": "horsens",
       "name": "Sundhedsråd Horsens",
       "region": "midtjylland",
-      "formand": {"name": "Jacob Klærke", "party": "F"},
-      "naestformand": {"name": "", "party": ""},
-      "municipalities": ["Horsens", "Hedensted", "Odder", "Skanderborg"],
+      "formand": {
+        "name": "Jacob Klærke",
+        "party": "F"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
+      "municipalities": [
+        "Horsens",
+        "Hedensted",
+        "Odder",
+        "Skanderborg"
+      ],
       "regionalMembers": [
-        {"name": "Pernille Holm", "party": "F", "role": "Regionsrådsmedlem"},
-        {"name": "Susan Gyldenkilde", "party": "A", "role": "Regionsrådsmedlem"}
+        {
+          "name": "Pernille Holm",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Susan Gyldenkilde",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
@@ -660,18 +754,45 @@ const EMBEDDED_DATA = {
       "id": "kronjylland",
       "name": "Sundhedsråd Kronjylland",
       "region": "midtjylland",
-      "formand": {"name": "Jakob Søgaard Clausen", "party": "Æ"},
-      "naestformand": {"name": "Else Søjmark", "party": "A"},
+      "formand": {
+        "name": "Jakob Søgaard Clausen",
+        "party": "Æ"
+      },
+      "naestformand": {
+        "name": "Else Søjmark",
+        "party": "A"
+      },
       "residents": 230000,
       "memberCount": 11,
-      "municipalities": ["Randers", "Favrskov", "Norddjurs", "Syddjurs"],
+      "municipalities": [
+        "Randers",
+        "Favrskov",
+        "Norddjurs",
+        "Syddjurs"
+      ],
       "regionalMembers": [
-        {"name": "Jakob Søgaard Clausen", "party": "Æ", "role": "Formand / Regionsrådsmedlem"},
-        {"name": "Else Søjmark", "party": "A", "role": "Næstformand / Regionsrådsmedlem"}
+        {
+          "name": "Jakob Søgaard Clausen",
+          "party": "Æ",
+          "role": "Formand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Else Søjmark",
+          "party": "A",
+          "role": "Næstformand / Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [
-        {"name": "Nicolai Estrup", "party": "O", "municipality": "Randers"},
-        {"name": "Erik Bo Andersen", "party": "L", "municipality": "Randers"}
+        {
+          "name": "Nicolai Estrup",
+          "party": "O",
+          "municipality": "Randers"
+        },
+        {
+          "name": "Erik Bo Andersen",
+          "party": "L",
+          "municipality": "Randers"
+        }
       ],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
       "officialUrl": "https://www.rm.dk"
@@ -680,19 +801,49 @@ const EMBEDDED_DATA = {
       "id": "midt",
       "name": "Sundhedsråd Midt",
       "region": "midtjylland",
-      "formand": {"name": "Helle Jensen", "party": "I"},
-      "naestformand": {"name": "", "party": ""},
+      "formand": {
+        "name": "Helle Jensen",
+        "party": "I"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
       "residents": 244000,
       "memberCount": 11,
-      "municipalities": ["Viborg", "Skive", "Silkeborg"],
+      "municipalities": [
+        "Viborg",
+        "Skive",
+        "Silkeborg"
+      ],
       "regionalMembers": [
-        {"name": "Helle Jensen", "party": "I", "role": "Formand / Regionsrådsmedlem"}
+        {
+          "name": "Helle Jensen",
+          "party": "I",
+          "role": "Formand / Regionsrådsmedlem"
+        }
       ],
       "municipalMembers": [
-        {"name": "Brian Roed", "party": "A", "municipality": "Viborg"},
-        {"name": "Johannes Vesterby", "party": "V", "municipality": "Viborg"},
-        {"name": "Dorthe Schou Jensen", "party": "A", "municipality": "Silkeborg"},
-        {"name": "Lars Hansen", "party": "F", "municipality": "Silkeborg"}
+        {
+          "name": "Brian Roed",
+          "party": "A",
+          "municipality": "Viborg"
+        },
+        {
+          "name": "Johannes Vesterby",
+          "party": "V",
+          "municipality": "Viborg"
+        },
+        {
+          "name": "Dorthe Schou Jensen",
+          "party": "A",
+          "municipality": "Silkeborg"
+        },
+        {
+          "name": "Lars Hansen",
+          "party": "F",
+          "municipality": "Silkeborg"
+        }
       ],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
       "officialUrl": "https://www.rm.dk"
@@ -701,16 +852,38 @@ const EMBEDDED_DATA = {
       "id": "vestjylland",
       "name": "Sundhedsråd Vestjylland",
       "region": "midtjylland",
-      "formand": {"name": "Majbritt Birkholm", "party": "O"},
-      "naestformand": {"name": "", "party": ""},
+      "formand": {
+        "name": "Majbritt Birkholm",
+        "party": "O"
+      },
+      "naestformand": {
+        "name": "",
+        "party": ""
+      },
       "residents": 287000,
       "memberCount": 15,
-      "municipalities": ["Herning", "Holstebro", "Ikast-Brande", "Lemvig", "Ringkøbing-Skjern", "Struer"],
+      "municipalities": [
+        "Herning",
+        "Holstebro",
+        "Ikast-Brande",
+        "Lemvig",
+        "Ringkøbing-Skjern",
+        "Struer"
+      ],
       "regionalMembers": [
-        {"name": "Majbritt Birkholm", "party": "O", "role": "Formand / Regionsrådsmedlem (også Holstebro byråd)"}
+        {
+          "name": "Majbritt Birkholm",
+          "party": "O",
+          "role": "Formand / Regionsrådsmedlem (også Holstebro byråd)"
+        }
       ],
       "municipalMembers": [
-        {"name": "Jens Kristian Hedegaard", "party": "V", "municipality": "Holstebro", "role": "Formand for Social- og Sundhedsudvalget"}
+        {
+          "name": "Jens Kristian Hedegaard",
+          "party": "V",
+          "municipality": "Holstebro",
+          "role": "Formand for Social- og Sundhedsudvalget"
+        }
       ],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
       "officialUrl": "https://www.rm.dk"
@@ -719,9 +892,26 @@ const EMBEDDED_DATA = {
       "id": "fyn",
       "name": "Sundhedsråd Fyn",
       "region": "syddanmark",
-      "formand": {"name": "Annette Blynel", "party": "F"},
-      "naestformand": {"name": "Anja Lund", "party": "V"},
-      "municipalities": ["Odense", "Assens", "Faaborg-Midtfyn", "Kerteminde", "Langeland", "Middelfart", "Nordfyns", "Nyborg", "Svendborg", "Ærø"],
+      "formand": {
+        "name": "Annette Blynel",
+        "party": "F"
+      },
+      "naestformand": {
+        "name": "Anja Lund",
+        "party": "V"
+      },
+      "municipalities": [
+        "Odense",
+        "Assens",
+        "Faaborg-Midtfyn",
+        "Kerteminde",
+        "Langeland",
+        "Middelfart",
+        "Nordfyns",
+        "Nyborg",
+        "Svendborg",
+        "Ærø"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-fyn",
@@ -731,9 +921,20 @@ const EMBEDDED_DATA = {
       "id": "lillebaelt",
       "name": "Sundhedsråd Lillebælt",
       "region": "syddanmark",
-      "formand": {"name": "Joachim Hoffmann", "party": "C"},
-      "naestformand": {"name": "Cecilie Liv Hansen", "party": "I"},
-      "municipalities": ["Kolding", "Fredericia", "Vejle", "Billund"],
+      "formand": {
+        "name": "Joachim Hoffmann",
+        "party": "C"
+      },
+      "naestformand": {
+        "name": "Cecilie Liv Hansen",
+        "party": "I"
+      },
+      "municipalities": [
+        "Kolding",
+        "Fredericia",
+        "Vejle",
+        "Billund"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-lillebaelt",
@@ -743,9 +944,20 @@ const EMBEDDED_DATA = {
       "id": "sydvestjylland",
       "name": "Sundhedsråd Sydvestjylland",
       "region": "syddanmark",
-      "formand": {"name": "Mette With Hagensen", "party": "A"},
-      "naestformand": {"name": "Susanne Dyreborg", "party": "Æ"},
-      "municipalities": ["Esbjerg", "Fanø", "Varde", "Vejen"],
+      "formand": {
+        "name": "Mette With Hagensen",
+        "party": "A"
+      },
+      "naestformand": {
+        "name": "Susanne Dyreborg",
+        "party": "Æ"
+      },
+      "municipalities": [
+        "Esbjerg",
+        "Fanø",
+        "Varde",
+        "Vejen"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-sydvestjylland",
@@ -755,9 +967,20 @@ const EMBEDDED_DATA = {
       "id": "soenderjylland",
       "name": "Sundhedsråd Sønderjylland",
       "region": "syddanmark",
-      "formand": {"name": "Susanne Eilersen", "party": "O"},
-      "naestformand": {"name": "Mette Bossen Linnet", "party": "V"},
-      "municipalities": ["Aabenraa", "Haderslev", "Sønderborg", "Tønder"],
+      "formand": {
+        "name": "Susanne Eilersen",
+        "party": "O"
+      },
+      "naestformand": {
+        "name": "Mette Bossen Linnet",
+        "party": "V"
+      },
+      "municipalities": [
+        "Aabenraa",
+        "Haderslev",
+        "Sønderborg",
+        "Tønder"
+      ],
       "regionalMembers": [],
       "municipalMembers": [],
       "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland",
@@ -765,23 +988,68 @@ const EMBEDDED_DATA = {
     }
   ],
   "parties": {
-    "A": {"name": "Socialdemokratiet", "color": "#a82721"},
-    "B": {"name": "Radikale Venstre", "color": "#ff0080"},
-    "C": {"name": "Det Konservative Folkeparti", "color": "#96b226"},
-    "F": {"name": "Socialistisk Folkeparti", "color": "#bc1b8d"},
-    "I": {"name": "Liberal Alliance", "color": "#12213f"},
-    "K": {"name": "Kristendemokraterne", "color": "#8b4f9f"},
-    "L": {"name": "Lokalliste", "color": "#777777"},
-    "M": {"name": "Moderaterne", "color": "#482a7a"},
-    "O": {"name": "Dansk Folkeparti", "color": "#eac73e"},
-    "Q": {"name": "Frie Grønne", "color": "#2d9d3d"},
-    "V": {"name": "Venstre", "color": "#254264"},
-    "Æ": {"name": "Danmarksdemokraterne", "color": "#0e2a47"},
-    "Ø": {"name": "Enhedslisten", "color": "#e6352f"},
-    "Å": {"name": "Alternativet", "color": "#2b8738"}
+    "A": {
+      "name": "Socialdemokratiet",
+      "color": "#a82721"
+    },
+    "B": {
+      "name": "Radikale Venstre",
+      "color": "#ff0080"
+    },
+    "C": {
+      "name": "Det Konservative Folkeparti",
+      "color": "#96b226"
+    },
+    "F": {
+      "name": "Socialistisk Folkeparti",
+      "color": "#bc1b8d"
+    },
+    "I": {
+      "name": "Liberal Alliance",
+      "color": "#12213f"
+    },
+    "K": {
+      "name": "Kristendemokraterne",
+      "color": "#8b4f9f"
+    },
+    "L": {
+      "name": "Lokalliste",
+      "color": "#777777"
+    },
+    "M": {
+      "name": "Moderaterne",
+      "color": "#482a7a"
+    },
+    "O": {
+      "name": "Dansk Folkeparti",
+      "color": "#eac73e"
+    },
+    "Q": {
+      "name": "Frie Grønne",
+      "color": "#2d9d3d"
+    },
+    "V": {
+      "name": "Venstre",
+      "color": "#254264"
+    },
+    "Æ": {
+      "name": "Danmarksdemokraterne",
+      "color": "#0e2a47"
+    },
+    "Ø": {
+      "name": "Enhedslisten",
+      "color": "#e6352f"
+    },
+    "Å": {
+      "name": "Alternativet",
+      "color": "#2b8738"
+    },
+    "S": {
+      "name": "Lokalliste / ukendt bogstav",
+      "color": "#888888"
+    }
   }
 };
-
 let DATA = null;
 
 async function loadData() {
@@ -790,31 +1058,21 @@ async function loadData() {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     DATA = await res.json();
   } catch (e) {
-    console.warn('data.json not reachable, using embedded data:', e.message);
+    console.warn('Using embedded data:', e.message);
     DATA = EMBEDDED_DATA;
   }
   if (!DATA) {
-    document.body.innerHTML = '<div style="padding:40px;text-align:center;font-family:sans-serif;">' +
-      '<h2>Kunne ikke indlæse data</h2><p>Placer <code>data.json</code> i samme mappe som HTML-filen, ' +
-      'eller åbn siden via en lokal webserver (fx <code>python3 -m http.server</code>).</p></div>';
+    document.body.innerHTML = '<div style="padding:40px;text-align:center;font-family:sans-serif;"><h2>Kunne ikke indlæse data</h2><p>Placer <code>data.json</code> samme sted som HTML-filen, eller åbn via en lokal webserver.</p></div>';
     return;
   }
   render();
 }
 
 function render() {
-  renderMeta();
-  renderOverview();
-  renderCouncils();
-  renderRegions();
-  renderEconomy();
-  renderSources();
-}
-
-function renderMeta() {
   document.getElementById('lastUpdated').textContent = DATA.meta.lastUpdated || '—';
   document.getElementById('sourceCount').textContent = (DATA.meta.sources || []).length;
   document.getElementById('dataVersion').textContent = DATA.meta.dataVersion || '—';
+  renderOverview(); renderCouncils(); renderRegions(); renderEconomy(); renderSources();
 }
 
 function renderOverview() {
@@ -824,32 +1082,20 @@ function renderOverview() {
     const councilsHere = DATA.councils.filter(c => c.region === r.id);
     const card = document.createElement('div');
     card.className = 'region-card';
+    card.style.cursor = 'pointer';
+    card.onclick = () => showView('regions');
     card.innerHTML = `
       <div class="status ${r.status.startsWith('Forberedende') ? 'preparing' : ''}">${r.status}</div>
       <h3>${r.name}</h3>
       <p>${r.description}</p>
       <p><strong>${councilsHere.length}</strong> sundhedsråd i regionen.</p>
       <div class="formand-block">
-        <div>
-          <div class="label">Regionsrådsformand</div>
-          <div class="name">${r.regionsraadsformand.name}${partyChip(r.regionsraadsformand.party)}</div>
-        </div>
+        <div><div class="label">Regionsrådsformand</div><div class="name">${r.regionsraadsformand.name}${partyChip(r.regionsraadsformand.party)}</div></div>
       </div>`;
-    card.style.cursor = 'pointer';
-    card.onclick = () => { showView('regions'); };
     wrap.appendChild(card);
   });
-  // Count municipal members
-  let muni = 0, reg = 0;
-  DATA.councils.forEach(c => {
-    muni += (c.municipalMembers || []).length;
-    reg += (c.regionalMembers || []).length;
-  });
-  if (muni > 0) document.getElementById('muniMembersCount').textContent = muni;
-  // total members fallback stays at 229 (official figure)
 }
 
-// =========================== COUNCILS ===========================
 const councilGrid = document.getElementById('councilGrid');
 const searchInput = document.getElementById('searchInput');
 const regionFilter = document.getElementById('regionFilter');
@@ -861,47 +1107,33 @@ function renderCouncils() {
   const filtered = DATA.councils.filter(c => {
     if (region && c.region !== region) return false;
     if (!q) return true;
-    const hay = [
-      c.name,
-      c.formand?.name, c.naestformand?.name,
-      ...(c.municipalities || []),
-      ...(c.regionalMembers || []).map(m => m.name),
-      ...(c.municipalMembers || []).map(m => m.name)
-    ].join(' ').toLowerCase();
+    const hay = [c.name, c.formand?.name, c.naestformand?.name, ...(c.municipalities || []), ...(c.regionalMembers || []).map(m => m.name), ...(c.municipalMembers || []).map(m => m.name)].join(' ').toLowerCase();
     return hay.includes(q);
   });
   councilGrid.innerHTML = '';
   filtered.forEach(c => {
-    const region = DATA.regions.find(r => r.id === c.region);
+    const reg = DATA.regions.find(r => r.id === c.region);
     const card = document.createElement('div');
     card.className = 'council-card';
     card.onclick = () => openModal(c.id);
     card.innerHTML = `
-      <span class="region-tag">${region ? region.name : ''}</span>
+      <span class="region-tag">${reg ? reg.name : ''}</span>
       <h3>${c.name}</h3>
-      <div class="formand">
-        <strong>Formand:</strong> ${c.formand.name || '—'}${partyChip(c.formand.party)}
-      </div>
-      <div class="municipalities">
-        ${(c.municipalities || []).slice(0,5).join(', ')}${(c.municipalities || []).length > 5 ? '…' : ''}
-      </div>`;
+      <div class="formand"><strong>Formand:</strong> ${c.formand.name || '—'}${partyChip(c.formand.party)}</div>
+      <div class="municipalities">${(c.municipalities || []).slice(0,5).join(', ')}${(c.municipalities || []).length > 5 ? '…' : ''}</div>`;
     councilGrid.appendChild(card);
   });
   resultCount.textContent = `${filtered.length} af ${DATA.councils.length} råd`;
 }
-
 searchInput.addEventListener('input', renderCouncils);
 regionFilter.addEventListener('change', renderCouncils);
 
-// =========================== REGIONS ===========================
 function renderRegions() {
   const wrap = document.getElementById('regionDetail');
   wrap.innerHTML = '';
   DATA.regions.forEach(r => {
     const councilsHere = DATA.councils.filter(c => c.region === r.id);
-    const councilLinks = councilsHere
-      .map(c => `<a href="#" onclick="event.preventDefault();openModal('${c.id}');" style="color:var(--accent);text-decoration:none;">${c.name}</a>`)
-      .join(' · ');
+    const councilLinks = councilsHere.map(c => `<a href="#" onclick="event.preventDefault();openModal('${c.id}');" style="color:var(--accent);text-decoration:none;">${c.name}</a>`).join(' · ');
     const card = document.createElement('div');
     card.className = 'region-card';
     card.innerHTML = `
@@ -909,10 +1141,7 @@ function renderRegions() {
       <h3>${r.name}</h3>
       <p>${r.description}</p>
       <div class="formand-block">
-        <div>
-          <div class="label">Regionsrådsformand</div>
-          <div class="name">${r.regionsraadsformand.name}${partyChip(r.regionsraadsformand.party)}</div>
-        </div>
+        <div><div class="label">Regionsrådsformand</div><div class="name">${r.regionsraadsformand.name}${partyChip(r.regionsraadsformand.party)}</div></div>
         <a href="${r.website}" target="_blank" rel="noopener" style="font-size:13px;color:var(--accent);text-decoration:none;">Hjemmeside ↗</a>
       </div>
       <h4 style="margin-top:14px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;">${councilsHere.length} sundhedsråd</h4>
@@ -921,48 +1150,30 @@ function renderRegions() {
   });
 }
 
-// =========================== ECONOMY ===========================
 function renderEconomy() {
   const bar = document.getElementById('timelineBar');
   const labels = document.getElementById('timelineLabels');
   const note = document.getElementById('timelineNote');
   const extra = document.getElementById('econExtra');
-  bar.innerHTML = '';
-  labels.innerHTML = '';
+  bar.innerHTML = ''; labels.innerHTML = '';
   const max = Math.max(...DATA.economy.timeline.map(t => t.amountMio));
   DATA.economy.timeline.forEach(t => {
     const b = document.createElement('div');
     b.className = 'bar';
-    const h = Math.max(8, (t.amountMio / max) * 100);
-    b.style.height = h + '%';
+    b.style.height = Math.max(8, (t.amountMio / max) * 100) + '%';
     b.innerHTML = `<span class="val">${t.label}</span>`;
-    b.onclick = () => {
-      note.innerHTML = `<strong>${t.year}:</strong> ${t.note}`;
-    };
+    b.onclick = () => { note.innerHTML = `<strong>${t.year}:</strong> ${t.note}`; };
     bar.appendChild(b);
     const l = document.createElement('div');
     l.textContent = t.year;
     labels.appendChild(l);
   });
   extra.innerHTML = `
-    <div class="card">
-      <div class="label">Driftsramme-løft 2026</div>
-      <div class="val">+${DATA.economy.additional.operationsLift2026Mia} mia.</div>
-      <div class="note">${DATA.economy.additional.operationsLift2026Note}</div>
-    </div>
-    <div class="card">
-      <div class="label">Anlæg 2026</div>
-      <div class="val">+${DATA.economy.additional.constructionLift2026Mia} mia.</div>
-      <div class="note">${DATA.economy.additional.constructionLift2026Note}</div>
-    </div>
-    <div class="card">
-      <div class="label">2027 → 2030</div>
-      <div class="val">≈ 3x</div>
-      <div class="note">Beløbet mere end tredobles i perioden — fra ca. 600 mio. til 2 mia. kr. årligt.</div>
-    </div>`;
+    <div class="card"><div class="label">Driftsramme-løft 2026</div><div class="val">+${DATA.economy.additional.operationsLift2026Mia} mia.</div><div class="note">${DATA.economy.additional.operationsLift2026Note}</div></div>
+    <div class="card"><div class="label">Anlæg 2026</div><div class="val">+${DATA.economy.additional.constructionLift2026Mia} mia.</div><div class="note">${DATA.economy.additional.constructionLift2026Note}</div></div>
+    <div class="card"><div class="label">2027 → 2030</div><div class="val">≈ 3x</div><div class="note">Beløbet mere end tredobles i perioden.</div></div>`;
 }
 
-// =========================== SOURCES ===========================
 function renderSources() {
   const list = document.getElementById('sourceList');
   list.innerHTML = '';
@@ -973,7 +1184,6 @@ function renderSources() {
   });
 }
 
-// =========================== MODAL ===========================
 function openModal(councilId) {
   const c = DATA.councils.find(x => x.id === councilId);
   if (!c) return;
@@ -981,57 +1191,40 @@ function openModal(councilId) {
   document.getElementById('modalTitle').textContent = c.name;
   document.getElementById('modalRegion').textContent = region ? region.name : '';
   const body = document.getElementById('modalBody');
-
   let html = `
     <div class="leaderboard">
-      <div class="role-card">
-        <div class="role">Formand (regional)</div>
-        <div class="name">${c.formand.name || '—'}${partyChip(c.formand.party)}</div>
-      </div>
-      <div class="role-card">
-        <div class="role">Næstformand</div>
-        <div class="name">${c.naestformand?.name || '—'}${partyChip(c.naestformand?.party)}</div>
-      </div>
+      <div class="role-card"><div class="role">Formand (regional)</div><div class="name">${c.formand.name || '—'}${partyChip(c.formand.party)}</div></div>
+      <div class="role-card"><div class="role">Næstformand</div><div class="name">${c.naestformand?.name || '—'}${partyChip(c.naestformand?.party)}</div></div>
     </div>`;
-
   if (c.residents || c.memberCount) {
     html += '<h4>Geografi og størrelse</h4><div style="font-size:14px;">';
     if (c.residents) html += `<div><strong>${c.residents.toLocaleString('da-DK')}</strong> indbyggere</div>`;
     if (c.memberCount) html += `<div><strong>${c.memberCount}</strong> medlemmer i alt</div>`;
     html += '</div>';
   }
-
   html += '<h4>Kommuner i rådet</h4><div class="muni-chips">';
   (c.municipalities || []).forEach(m => { html += `<span class="chip">${m}</span>`; });
   html += '</div>';
-
   html += '<h4>Regionale medlemmer (flertal)</h4>';
   if ((c.regionalMembers || []).length) {
     html += '<ul class="member-list">';
-    c.regionalMembers.forEach(m => {
-      html += `<li><span>${m.name}${partyChip(m.party)}</span><span class="mem-role">${m.role || ''}</span></li>`;
-    });
+    c.regionalMembers.forEach(m => { html += `<li><span>${m.name}${partyChip(m.party)}</span><span class="mem-role">${m.role || ''}</span></li>`; });
     html += '</ul>';
   } else {
-    html += `<div class="empty-note">Fuld medlemsliste indlæses via scraperen. Se regionens hjemmeside for aktuelle medlemmer.</div>`;
+    html += `<div class="empty-note">Fuld medlemsliste indlæses via scraperen.</div>`;
   }
-
   html += '<h4>Kommunale medlemmer (mindretal)</h4>';
   if ((c.municipalMembers || []).length) {
     html += '<ul class="member-list">';
-    c.municipalMembers.forEach(m => {
-      html += `<li><span>${m.name}${partyChip(m.party)}</span><span class="mem-role">${m.municipality || ''}${m.role ? ' — ' + m.role : ''}</span></li>`;
-    });
+    c.municipalMembers.forEach(m => { html += `<li><span>${m.name}${partyChip(m.party)}</span><span class="mem-role">${m.municipality || ''}${m.role ? ' — ' + m.role : ''}</span></li>`; });
     html += '</ul>';
   } else {
-    html += `<div class="empty-note">Kommunale medlemmer indlæses via scraperen. Kommuner med &lt;80.000 indbyggere har 1 medlem, 80.000–300.000 har 2, og ≥300.000 har 3.</div>`;
+    html += `<div class="empty-note">Kommunale medlemmer indlæses via scraperen. Kommuner &lt;80.000 indb. har 1 medlem, 80.000–300.000 har 2, og ≥300.000 har 3.</div>`;
   }
-
   html += '<div class="modal-links">';
   if (c.referaterUrl) html += `<a href="${c.referaterUrl}" target="_blank" rel="noopener">Se referater ↗</a>`;
   if (c.officialUrl && c.officialUrl !== c.referaterUrl) html += `<a href="${c.officialUrl}" target="_blank" rel="noopener" class="secondary">Officiel side ↗</a>`;
   html += '</div>';
-
   body.innerHTML = html;
   document.getElementById('modalBackdrop').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1042,22 +1235,15 @@ function closeModal(e) {
   document.getElementById('modalBackdrop').classList.remove('open');
   document.body.style.overflow = '';
 }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
-});
-
-// =========================== TABS ===========================
 function showView(view) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === 'view-' + view));
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => showView(btn.dataset.view));
-});
+document.querySelectorAll('.tab-btn').forEach(btn => { btn.addEventListener('click', () => showView(btn.dataset.view)); });
 
-// =========================== HELPERS ===========================
 function partyChip(party) {
   if (!party) return '';
   const p = DATA?.parties?.[party];
@@ -1065,7 +1251,6 @@ function partyChip(party) {
   return ` <span class="party-chip" style="background:${p.color};" title="${p.name}">${party}</span>`;
 }
 
-// Boot
 loadData();
 </script>
 </body>
