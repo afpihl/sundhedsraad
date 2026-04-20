@@ -2,7 +2,7 @@
   "meta": {
     "lastUpdated": "2026-04-19",
     "dataVersion": "0.1.0",
-    "note": "Foreløbig datasæt. Formænd, næstformænd og regioner er verificeret via offentlige kilder. Fuld medlemsliste kræver scraping af regionernes officielle sider — se scraper.py.",
+    "note": "Fuldt datasæt for Region Østdanmark er verificeret via de officielle første referater (januar 2026). Region Nordjylland, Midtjylland og Syddanmark er delvis udfyldt — tilføj flere referater for at komplettere.",
     "sources": [
       {
         "title": "Aftale om regionernes økonomi for 2026 (FM.dk)",
@@ -28,8 +28,7 @@
         "title": "Lex.dk: Sundhedsråd",
         "url": "https://lex.dk/sundhedsr%C3%A5d"
       }
-    ],
-    "lastScrapeRun": "2026-04-19T20:19:14.708604+00:00"
+    ]
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
@@ -129,22 +128,92 @@
       "name": "Sundhedsråd Hovedstaden",
       "region": "oestdanmark",
       "formand": {
-        "name": "(Radikale Venstre)",
-        "party": "B",
-        "note": "Navn ikke bekræftet i denne version"
+        "name": "Thomas Rohden",
+        "party": "B"
       },
       "naestformand": {
-        "name": "(Socialdemokratiet)",
+        "name": "Laila Kildesgaard",
         "party": "A"
       },
       "municipalities": [
         "Københavns Kommune",
-        "Frederiksberg"
+        "Frederiksberg",
+        "Bornholms Regionskommune"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "regionalMembers": [
+        {
+          "name": "Thomas Rohden",
+          "party": "B",
+          "role": "Formand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/thomas-rohden-313813a8/"
+        },
+        {
+          "name": "Laila Kildesgaard",
+          "party": "A",
+          "role": "Næstformand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/laila-kildesgaard-98026732/"
+        },
+        {
+          "name": "Line Ervolder",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Jacob Rosenberg",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Peter Westermann",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Julie Jacobsen",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Sanne Friborg",
+          "party": "Ø",
+          "role": "Regionsrådsmedlem"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Sisse Marie Welling",
+          "party": "F",
+          "municipality": "København"
+        },
+        {
+          "name": "Jens-Kristian Lütken",
+          "party": "V",
+          "municipality": "København"
+        },
+        {
+          "name": "Karina Vestergård Madsen",
+          "party": "Ø",
+          "municipality": "København"
+        },
+        {
+          "name": "Michael Vindfeldt",
+          "party": "A",
+          "municipality": "Frederiksberg"
+        },
+        {
+          "name": "Sine Heltberg",
+          "party": "A",
+          "municipality": "Frederiksberg"
+        },
+        {
+          "name": "René Danielsson",
+          "party": "O",
+          "municipality": "Bornholms Regionskommune"
+        }
+      ],
       "referaterUrl": "https://www.regionoest.dk/politik",
-      "officialUrl": "https://www.regionoest.dk"
+      "officialUrl": "https://www.regionoest.dk",
+      "memberCount": 13
     },
     {
       "id": "koebenhavns-omegn-nord",
@@ -159,28 +228,34 @@
         "party": "B"
       },
       "municipalities": [
+        "Herlev",
+        "Ballerup",
         "Gentofte",
         "Gladsaxe",
-        "Herlev",
         "Lyngby-Taarbæk",
-        "Rudersdal",
-        "Furesø"
+        "Rødovre",
+        "Egedal",
+        "Furesø",
+        "Rudersdal"
       ],
       "regionalMembers": [
         {
           "name": "Randi Mondorf",
           "party": "V",
-          "role": "Formand / Regionsrådsmedlem"
+          "role": "Formand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/randi-mondorf/"
         },
         {
           "name": "Stinus Lindgreen",
           "party": "B",
-          "role": "Næstformand / Regionsrådsmedlem"
+          "role": "Næstformand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/stinuslindgreen/"
         },
         {
           "name": "Sofie de Bretteville",
           "party": "A",
-          "role": "Regionsrådsmedlem"
+          "role": "Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/sofie-de-bretteville-olsen-228318141/"
         },
         {
           "name": "Irfan Gilani",
@@ -289,16 +364,15 @@
       "name": "Sundhedsråd Nordsjælland",
       "region": "oestdanmark",
       "formand": {
-        "name": "(Det Konservative Folkeparti)",
+        "name": "Christoffer Buster Reinhardt",
         "party": "C"
       },
       "naestformand": {
-        "name": "(Venstre)",
-        "party": "V"
+        "name": "Stinus Lindgreen",
+        "party": "B"
       },
       "municipalities": [
         "Allerød",
-        "Egedal",
         "Fredensborg",
         "Frederikssund",
         "Gribskov",
@@ -307,40 +381,246 @@
         "Hillerød",
         "Hørsholm"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "regionalMembers": [
+        {
+          "name": "Christoffer Buster Reinhardt",
+          "party": "C",
+          "role": "Formand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/christoffer-buster-reinhardt-a28240115/"
+        },
+        {
+          "name": "Stinus Lindgreen",
+          "party": "B",
+          "role": "Næstformand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/stinuslindgreen/"
+        },
+        {
+          "name": "Susanne Lundvald",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "John Hansen",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Peter Westermann",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Anja Rosengreen",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Nicolai Wang",
+          "party": "I",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Søren Lund Hansen",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Tormod Olsen",
+          "party": "Ø",
+          "role": "Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/tormod-olsen-06712033/"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Christoffer Lorenzen",
+          "party": "C",
+          "municipality": "Hillerød",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Clara Rao",
+          "party": "V",
+          "municipality": "Allerød",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Karina V. Jensen",
+          "party": "F",
+          "municipality": "Fredensborg",
+          "role": "Udvalgsforkvinde"
+        },
+        {
+          "name": "Anne Sofie Uhrskov",
+          "party": "V",
+          "municipality": "Frederikssund",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Helle Lund",
+          "party": "I",
+          "municipality": "Gribskov",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Thue Lundgaard",
+          "party": "",
+          "municipality": "Halsnæs",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Benedikte Kiær",
+          "party": "C",
+          "municipality": "Helsingør",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Ann Lindhardt",
+          "party": "V",
+          "municipality": "Hørsholm",
+          "role": "Udvalgsformand"
+        }
+      ],
       "referaterUrl": "https://www.regionoest.dk/politik",
-      "officialUrl": "https://www.regionoest.dk"
+      "officialUrl": "https://www.regionoest.dk",
+      "memberCount": 17
     },
     {
       "id": "amager-vestegnen",
       "name": "Sundhedsråd Amager og Vestegnen",
       "region": "oestdanmark",
       "formand": {
-        "name": "(Enhedslisten)",
+        "name": "Tormod Olsen",
         "party": "Ø"
       },
       "naestformand": {
-        "name": "(Socialdemokratiet)",
+        "name": "Sofie de Bretteville",
         "party": "A"
       },
       "municipalities": [
-        "Albertslund",
-        "Ballerup",
-        "Brøndby",
-        "Dragør",
-        "Glostrup",
         "Hvidovre",
-        "Høje-Taastrup",
-        "Ishøj",
-        "Rødovre",
+        "Dragør",
         "Tårnby",
+        "Albertslund",
+        "Brøndby",
+        "Glostrup",
+        "Høje Taastrup",
+        "Ishøj",
         "Vallensbæk"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "regionalMembers": [
+        {
+          "name": "Tormod Olsen",
+          "party": "Ø",
+          "role": "Formand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/tormod-olsen-06712033/"
+        },
+        {
+          "name": "Sofie de Bretteville",
+          "party": "A",
+          "role": "Næstformand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/sofie-de-bretteville-olsen-228318141/"
+        },
+        {
+          "name": "Kenneth Nielsen",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Sine Reffstrup",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Irfan Gilani",
+          "party": "B",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Helge Adam Møller",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Sadek Al-Amood",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Nicolai Wang",
+          "party": "I",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "René Danielsson",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Gül Øzcan",
+          "party": "Ø",
+          "role": "Regionsrådsmedlem"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Pia Mols",
+          "party": "HL",
+          "municipality": "Hvidovre",
+          "role": "Udvalgsformand (Hvidovre Listen)"
+        },
+        {
+          "name": "Kenneth Gøtterup",
+          "party": "C",
+          "municipality": "Dragør",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Allan S. Andersen",
+          "party": "A",
+          "municipality": "Tårnby",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Lars Gravgaard Hansen",
+          "party": "C",
+          "municipality": "Albertslund",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Maja Højgaard",
+          "party": "A",
+          "municipality": "Brøndby",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Lisa Ward",
+          "party": "A",
+          "municipality": "Glostrup",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Kurt Scheelsbeck",
+          "party": "C",
+          "municipality": "Høje Taastrup",
+          "role": "Fg. borgmester"
+        },
+        {
+          "name": "Merete Amdisen",
+          "party": "A",
+          "municipality": "Ishøj",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Jytte Bendtsen",
+          "party": "C",
+          "municipality": "Vallensbæk",
+          "role": "Udvalgsformand"
+        }
+      ],
       "referaterUrl": "https://www.regionoest.dk/politik",
-      "officialUrl": "https://www.regionoest.dk"
+      "officialUrl": "https://www.regionoest.dk",
+      "memberCount": 19
     },
     {
       "id": "oestsjaelland-oerne",
@@ -351,27 +631,144 @@
         "party": "A"
       },
       "naestformand": {
-        "name": "(Det Konservative Folkeparti)",
+        "name": "Christian Wedell-Neergaard",
         "party": "C"
       },
       "municipalities": [
-        "Roskilde",
-        "Lejre",
+        "Køge",
         "Solrød",
         "Greve",
-        "Køge",
+        "Roskilde",
         "Stevns",
         "Faxe",
-        "Næstved",
         "Vordingborg",
         "Guldborgsund",
-        "Lolland",
-        "Bornholm"
+        "Lolland"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "regionalMembers": [
+        {
+          "name": "Torben Hollmann",
+          "party": "A",
+          "role": "Formand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/torben-hollmann-ab131357/"
+        },
+        {
+          "name": "Christian Wedell-Neergaard",
+          "party": "C",
+          "role": "Næstformand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/christian-wedell-neergaard-8b59242/"
+        },
+        {
+          "name": "John Hansen",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Sofie Holm",
+          "party": "B",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Tina-Mia Eriksen",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Julie Hoff Sørensen",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Charlotte Bagge",
+          "party": "M",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Jan Herskov",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Iben Krog",
+          "party": "V",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Benny Damgaard",
+          "party": "Æ",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Dorthe Adelsbech",
+          "party": "V",
+          "role": "Regionsrådsmedlem"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Ken Kristensen",
+          "party": "V",
+          "municipality": "Køge",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Anette Fynbo Blem",
+          "party": "T",
+          "municipality": "Solrød",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Pernille Beckmann",
+          "party": "V",
+          "municipality": "Greve",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Tomas Breddam",
+          "party": "A",
+          "municipality": "Roskilde",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Tina Boel",
+          "party": "F",
+          "municipality": "Roskilde",
+          "role": "Forperson for Sundheds- og Omsorgsudvalget"
+        },
+        {
+          "name": "Thomas Cilius Hansen",
+          "party": "V",
+          "municipality": "Stevns",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Mikkel Dam",
+          "party": "I",
+          "municipality": "Faxe",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Søren Hansen",
+          "party": "O",
+          "municipality": "Vordingborg",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Simon Hansen",
+          "party": "A",
+          "municipality": "Guldborgsund",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Marie-Louise Brehm Nielsen",
+          "party": "J",
+          "municipality": "Lolland",
+          "role": "Borgmester"
+        }
+      ],
       "referaterUrl": "https://www.regionoest.dk/politik",
-      "officialUrl": "https://www.regionoest.dk"
+      "officialUrl": "https://www.regionoest.dk",
+      "memberCount": 21
     },
     {
       "id": "midt-vestsjaelland",
@@ -382,21 +779,142 @@
         "party": "V"
       },
       "naestformand": {
-        "name": "(Enhedslisten)",
+        "name": "Bruno Jerup",
         "party": "Ø"
       },
       "municipalities": [
+        "Slagelse",
         "Holbæk",
+        "Næstved",
+        "Ringsted",
+        "Sorø",
         "Odsherred",
         "Kalundborg",
-        "Sorø",
-        "Ringsted",
-        "Slagelse"
+        "Lejre"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "regionalMembers": [
+        {
+          "name": "Camilla Hove Lund",
+          "party": "V",
+          "role": "Formand / Regionsrådsmedlem",
+          "linkedin": "https://www.linkedin.com/in/camilla-hove-lund-75970015/"
+        },
+        {
+          "name": "Bruno Jerup",
+          "party": "Ø",
+          "role": "Næstformand / Regionsrådsmedlem"
+        },
+        {
+          "name": "Trine Birk Andersen",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Thomas Adelskov",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Susanne Lundvald",
+          "party": "A",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Sofie Holm",
+          "party": "B",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Tina-Mia Eriksen",
+          "party": "C",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Hanne Svenningsen",
+          "party": "F",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Villum Christensen",
+          "party": "I",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Søren Lund Hansen",
+          "party": "O",
+          "role": "Regionsrådsmedlem"
+        },
+        {
+          "name": "Anders Koefoed",
+          "party": "V",
+          "role": "Regionsrådsmedlem"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Knud Vincents",
+          "party": "V",
+          "municipality": "Slagelse",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Anne Bjergvang",
+          "party": "A",
+          "municipality": "Slagelse",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Susanne Utoft",
+          "party": "A",
+          "municipality": "Holbæk",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Kenneth Sørensen",
+          "party": "V",
+          "municipality": "Næstved",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Nickolai Noel Hamann",
+          "party": "O",
+          "municipality": "Næstved",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Andreas Karlsen",
+          "party": "C",
+          "municipality": "Ringsted",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Jakob Spliid",
+          "party": "V",
+          "municipality": "Sorø",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Hanne Pigonska",
+          "party": "V",
+          "municipality": "Odsherred",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Peter Jacobsen",
+          "party": "O",
+          "municipality": "Kalundborg",
+          "role": "Udvalgsformand"
+        },
+        {
+          "name": "Mikael Ralf Baade Larsen",
+          "party": "F",
+          "municipality": "Lejre",
+          "role": "Borgmester"
+        }
+      ],
       "referaterUrl": "https://www.regionoest.dk/nyheder/region-oestdanmark/2026/foerste-moede-i-nyt-sundhedsraad-for-midt-og-vestsjaelland",
-      "officialUrl": "https://www.regionoest.dk"
+      "officialUrl": "https://www.regionoest.dk",
+      "memberCount": 21
     },
     {
       "id": "limfjorden",
@@ -407,8 +925,8 @@
         "party": "C"
       },
       "naestformand": {
-        "name": "",
-        "party": ""
+        "name": "Gitte Bundgaard",
+        "party": "Æ"
       },
       "municipalities": [
         "Aalborg",
@@ -421,14 +939,120 @@
       ],
       "regionalMembers": [
         {
-          "name": "Lina Hundebøll Jespersen",
+          "name": "Pia Buus Pinstrup",
+          "party": "C",
+          "role": "Formand / Regionsrådsmedlem",
+          "email": "p.pinstrup@rn.dk",
+          "linkedin": "https://www.linkedin.com/in/pia-buus-pinstrup-0988a271/"
+        },
+        {
+          "name": "Gitte Bundgaard",
+          "party": "Æ",
+          "role": "Næstformand / Regionsrådsmedlem",
+          "email": "gitte.b@rn.dk"
+        },
+        {
+          "name": "Jakob Dyrman",
           "party": "V",
-          "role": "Regionsrådsmedlem"
+          "role": "Regionsrådsmedlem",
+          "email": "j.dyrman@rn.dk"
+        },
+        {
+          "name": "Ib Madsen",
+          "party": "O",
+          "role": "Regionsrådsmedlem",
+          "email": "ib.madsen@rn.dk"
+        },
+        {
+          "name": "Kenneth Hammer",
+          "party": "I",
+          "role": "Regionsrådsmedlem",
+          "email": "kenneth.hammer@rn.dk"
+        },
+        {
+          "name": "Lærke Holm Sø",
+          "party": "V",
+          "role": "Regionsrådsmedlem",
+          "email": "laerke.soe@rn.dk"
+        },
+        {
+          "name": "Lina Hundebøl Jespersen",
+          "party": "V",
+          "role": "Regionsrådsmedlem (barsel)",
+          "email": "lina.jespersen@rn.dk"
+        },
+        {
+          "name": "Jess Laursen",
+          "party": "V",
+          "role": "Regionsrådsmedlem (vikar for Lina H. Jespersen)",
+          "email": "jevil@rn.dk"
+        },
+        {
+          "name": "Hanne Korsgaard",
+          "party": "A",
+          "role": "Regionsrådsmedlem",
+          "email": "h.korsgaard@rn.dk"
+        },
+        {
+          "name": "Torben Ringe Christensen",
+          "party": "A",
+          "role": "Regionsrådsmedlem",
+          "email": "t.ringe@rn.dk"
         }
       ],
-      "municipalMembers": [],
+      "municipalMembers": [
+        {
+          "name": "Vibeke Gamst",
+          "party": "UP",
+          "municipality": "Aalborg",
+          "email": "vg-byraad@aalborg.dk"
+        },
+        {
+          "name": "Peter Larsen",
+          "party": "F",
+          "municipality": "Aalborg",
+          "email": "pl-byraad@aalborg.dk"
+        },
+        {
+          "name": "Diana Aarestrup",
+          "party": "A",
+          "municipality": "Jammerbugt",
+          "email": "Dap@jammerbugt.dk"
+        },
+        {
+          "name": "Jan Andersen",
+          "party": "V",
+          "municipality": "Mariagerfjord",
+          "email": "jatan@mariagerfjord.dk"
+        },
+        {
+          "name": "Jette Trans Jepsen",
+          "party": "B",
+          "municipality": "Morsø",
+          "email": "Jtj@morsoe.dk"
+        },
+        {
+          "name": "Jeanette Sagan",
+          "party": "C",
+          "municipality": "Rebild",
+          "email": "bjesa@rebild.dk"
+        },
+        {
+          "name": "Peter Larsen",
+          "party": "I",
+          "municipality": "Thisted",
+          "email": "Petlar@thisted.dk"
+        },
+        {
+          "name": "Lars Andresen",
+          "party": "V",
+          "municipality": "Vesthimmerland",
+          "email": "laan@vesthimmerland.dk"
+        }
+      ],
       "referaterUrl": "https://rn.dk/politik",
-      "officialUrl": "https://rn.dk"
+      "officialUrl": "https://rn.dk",
+      "memberCount": 18
     },
     {
       "id": "vendsyssel",
@@ -439,8 +1063,8 @@
         "party": "V"
       },
       "naestformand": {
-        "name": "",
-        "party": ""
+        "name": "Kirsten Morild Andersen",
+        "party": "A"
       },
       "municipalities": [
         "Hjørring",
@@ -448,10 +1072,69 @@
         "Frederikshavn",
         "Læsø"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
+      "regionalMembers": [
+        {
+          "name": "Mogens Gade",
+          "party": "V",
+          "role": "Formand / Regionsrådsmedlem",
+          "email": "mogens.gade@rn.dk",
+          "linkedin": "https://www.linkedin.com/in/mogens-gade-aa995633/"
+        },
+        {
+          "name": "Kirsten Morild Andersen",
+          "party": "A",
+          "role": "Næstformand / Regionsrådsmedlem",
+          "email": "kirsten.andersen@rn.dk",
+          "linkedin": "https://www.linkedin.com/in/kirsten-morild-vincent-andersen-7a37463a2/"
+        },
+        {
+          "name": "Arne Boelt",
+          "party": "A",
+          "role": "Regionsrådsmedlem",
+          "email": "arne.boelt@rn.dk"
+        },
+        {
+          "name": "Anne Honoré Østergaard",
+          "party": "V",
+          "role": "Regionsrådsmedlem",
+          "email": "a.honore@rn.dk"
+        },
+        {
+          "name": "Lene Linnemann",
+          "party": "F",
+          "role": "Regionsrådsmedlem",
+          "email": "leli@rn.dk"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Per Møller",
+          "party": "C",
+          "municipality": "Hjørring",
+          "email": "Per.moller@hjoerring.dk"
+        },
+        {
+          "name": "Carsten Ullmann Andersen",
+          "party": "Æ",
+          "municipality": "Brønderslev",
+          "email": "bycua@99454545.dk"
+        },
+        {
+          "name": "Mette Hardam",
+          "party": "V",
+          "municipality": "Frederikshavn",
+          "email": "Mhha@frederikshavn.dk"
+        },
+        {
+          "name": "Michael Møller Kristensen",
+          "party": "F",
+          "municipality": "Læsø",
+          "email": "Michael.kristensen@laesoe.dk"
+        }
+      ],
       "referaterUrl": "https://rn.dk/politik",
-      "officialUrl": "https://rn.dk"
+      "officialUrl": "https://rn.dk",
+      "memberCount": 9
     },
     {
       "id": "aarhus",
@@ -475,58 +1158,64 @@
         {
           "name": "Purnima Erichsen",
           "party": "C",
-          "role": "Formand / Regionsrådsmedlem"
+          "email": "purnima.erichsen@rr.rm.dk",
+          "role": "Formand",
+          "linkedin": "https://www.linkedin.com/in/purnima-erichsen-1166b35/"
         },
         {
           "name": "Susanne Buch",
           "party": "F",
-          "role": "Næstformand / Regionsrådsmedlem"
-        },
-        {
-          "name": "Hanne Roed",
-          "party": "B",
-          "role": "Regionsrådsmedlem"
-        },
-        {
-          "name": "Nicolai Estrup",
-          "party": "O",
-          "role": "Regionsrådsmedlem"
+          "email": "susanne.buch@rr.rm.dk",
+          "role": "Næstformand"
         },
         {
           "name": "Christina Kirkegaard",
           "party": "A",
-          "role": "Regionsrådsmedlem"
+          "email": "chrikk@rm.dk"
+        },
+        {
+          "name": "Hanne Roed",
+          "party": "B",
+          "email": "Hanne.Roed@rr.rm.dk"
+        },
+        {
+          "name": "Nicolai Estrup",
+          "party": "O",
+          "email": "nicest@rm.dk"
         }
       ],
-      "municipalMembers": [],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
-      "referater": [
+      "municipalMembers": [
         {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
+          "name": "Anette Poulsen",
+          "party": "A",
+          "municipality": "Aarhus",
+          "email": "anette.poulsen@aarhus.dk",
+          "role": "Formand, Sundhed- og Omsorgsudvalget"
         },
         {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
+          "name": "Metin Lindved Aydin",
+          "party": "B",
+          "municipality": "Aarhus",
+          "email": "metin@aarhus.dk",
+          "role": "Rådmand for sundhed og omsorg"
         },
         {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
+          "name": "Michael Christensen",
+          "party": "I",
+          "municipality": "Aarhus",
+          "email": "michael.christensen@aarhus.dk",
+          "role": "Rådmand for sociale forhold og beskæftigelse"
         },
         {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=0788a937-0235-4348-8977-ccd7a310b18d"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Aarhus (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=a34cb00e-d3c2-42fb-9978-833aa5e1ccca"
+          "name": "Per Urban Olsen",
+          "party": "C",
+          "municipality": "Samsø",
+          "email": "aupuo@samsoe.dk",
+          "role": "Borgmester"
         }
-      ]
+      ],
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/",
+      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-aarhus/"
     },
     {
       "id": "horsens",
@@ -537,8 +1226,8 @@
         "party": "F"
       },
       "naestformand": {
-        "name": "",
-        "party": ""
+        "name": "Vivi Altenburg",
+        "party": "Æ"
       },
       "municipalities": [
         "Horsens",
@@ -548,45 +1237,78 @@
       ],
       "regionalMembers": [
         {
+          "name": "Jacob Klærke",
+          "party": "F",
+          "email": "jacob.klaerke@rr.rm.dk",
+          "role": "Formand"
+        },
+        {
+          "name": "Vivi Altenburg",
+          "party": "Æ",
+          "email": "vivalt@rm.dk",
+          "role": "Næstformand"
+        },
+        {
+          "name": "Christina Kirkegaard",
+          "party": "A",
+          "email": "chrikk@rm.dk"
+        },
+        {
+          "name": "Ib Bjerregaard",
+          "party": "V",
+          "email": "Ib.Bjerregaard@rr.rm.dk"
+        },
+        {
+          "name": "Malena Møller Mortensen",
+          "party": "C",
+          "email": "mamomo@rm.dk"
+        },
+        {
+          "name": "Michael Maaløe",
+          "party": "A",
+          "email": "mimaal@rm.dk"
+        }
+      ],
+      "municipalMembers": [
+        {
+          "name": "Jens Szabo",
+          "party": "V",
+          "municipality": "Skanderborg",
+          "email": "jens.szabo@skanderborg.dk",
+          "role": "Udvalgsformand, Sundheds- og Omsorgsudvalget"
+        },
+        {
+          "name": "Kasper Glyngø",
+          "party": "A",
+          "municipality": "Hedensted",
+          "email": "kasper.glyngoe@hedensted.dk",
+          "role": "Formand, udvalget for Social Omsorg"
+        },
+        {
+          "name": "Lone Jakobi",
+          "party": "A",
+          "municipality": "Odder",
+          "email": "lone.jakobi@odder.dk",
+          "role": "Borgmester"
+        },
+        {
           "name": "Pernille Holm",
           "party": "F",
-          "role": "Regionsrådsmedlem"
+          "municipality": "Horsens",
+          "email": "pvsh@horsens.dk",
+          "role": "Formand, Social- og Sundhedsudvalget"
         },
         {
           "name": "Susan Gyldenkilde",
           "party": "A",
-          "role": "Regionsrådsmedlem"
+          "municipality": "Horsens",
+          "email": "posg@horsens.dk",
+          "role": "Formand, Ældre- og Omsorgsudvalget"
         }
       ],
-      "municipalMembers": [],
       "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
       "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-horsens/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Horsens (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=482bb09b-7985-4a23-ac66-844c6e532f9f"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Horsens (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=b8c18264-a378-43d2-9719-677e2f143c5e"
-        }
-      ]
+      "memberCount": 11
     },
     {
       "id": "kronjylland",
@@ -612,54 +1334,75 @@
         {
           "name": "Jakob Søgaard Clausen",
           "party": "Æ",
-          "role": "Formand / Regionsrådsmedlem"
+          "email": "jakcla@rm.dk",
+          "role": "Formand"
         },
         {
           "name": "Else Søjmark",
           "party": "A",
-          "role": "Næstformand / Regionsrådsmedlem"
+          "email": "else.soejmark@rr.rm.dk",
+          "role": "Næstformand"
+        },
+        {
+          "name": "Else Kayser",
+          "party": "Ø",
+          "email": "else.kayser@rr.rm.dk"
+        },
+        {
+          "name": "Jakob Fuglsang Andersen",
+          "party": "F",
+          "email": "jabane@rm.dk"
+        },
+        {
+          "name": "Michele Offenbach Holm",
+          "party": "A",
+          "email": "michun@rm.dk"
+        },
+        {
+          "name": "Nils Borring",
+          "party": "A",
+          "email": "nilbor@rm.dk"
         }
       ],
       "municipalMembers": [
         {
-          "name": "Nicolai Estrup",
-          "party": "O",
-          "municipality": "Randers"
+          "name": "Charlotte Green",
+          "party": "C",
+          "municipality": "Favrskov",
+          "email": "chgr@favrskov.dk",
+          "role": "Formand, Social- og Sundhedsudvalget"
         },
         {
           "name": "Erik Bo Andersen",
-          "party": "L",
-          "municipality": "Randers"
+          "party": "ØB",
+          "municipality": "Randers",
+          "email": "erik.bo.andersen@randers.dk",
+          "role": "Formand, Sundheds-, idræts- og kulturudvalget"
+        },
+        {
+          "name": "Jens Kannegaard Lundager",
+          "party": "O",
+          "municipality": "Norddjurs",
+          "email": "jkl@norddjurs.dk",
+          "role": "Formand, Sundheds-, Pleje- og Omsorgsområdet"
+        },
+        {
+          "name": "Jørgen Ivar Brus Mikkelsen",
+          "party": "V",
+          "municipality": "Syddjurs",
+          "email": "jibr@syddjurs.dk",
+          "role": "Formand, Sundheds- og Ældreudvalget"
+        },
+        {
+          "name": "Nicolai Estrup",
+          "party": "O",
+          "municipality": "Randers",
+          "email": "n.estrup@randers.dk",
+          "role": "Formand, Omsorgsudvalget"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-kronjylland/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=296d8b21-9333-4b56-a59b-c1904f10f395"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Kronjylland (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=ecf89ba0-c546-490e-9aef-5a4c140706b5"
-        }
-      ]
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
+      "officialUrl": "https://www.rm.dk"
     },
     {
       "id": "midt",
@@ -670,8 +1413,8 @@
         "party": "I"
       },
       "naestformand": {
-        "name": "",
-        "party": ""
+        "name": "Annette Roed",
+        "party": "A"
       },
       "residents": 244000,
       "memberCount": 11,
@@ -684,59 +1427,75 @@
         {
           "name": "Helle Jensen",
           "party": "I",
-          "role": "Formand / Regionsrådsmedlem"
+          "email": "heheje@rm.dk",
+          "role": "Formand"
+        },
+        {
+          "name": "Annette Roed",
+          "party": "A",
+          "email": "annette.roed@rr.rm.dk",
+          "role": "Næstformand"
+        },
+        {
+          "name": "Birte Markfoged",
+          "party": "V",
+          "email": "birmak@rm.dk"
+        },
+        {
+          "name": "Malena Møller Mortensen",
+          "party": "C",
+          "email": "mamomo@rm.dk"
+        },
+        {
+          "name": "Naja Kallesøe",
+          "party": "F",
+          "email": "najkal@rm.dk"
+        },
+        {
+          "name": "Poul Berggreen",
+          "party": "V",
+          "email": "poul.berggreen@rr.rm.dk"
         }
       ],
       "municipalMembers": [
         {
+          "name": "Betina Bugge",
+          "party": "Æ",
+          "municipality": "Skive",
+          "email": "bebu@skivekommune.dk",
+          "role": "Formand, Sundheds-, Social- og Forebyggelsesudvalget"
+        },
+        {
           "name": "Brian Roed",
           "party": "A",
-          "municipality": "Viborg"
+          "municipality": "Viborg",
+          "email": "broed@viborg.dk",
+          "role": "Formand, Social- og Sundhedsudvalget"
+        },
+        {
+          "name": "Dorthe Jensen",
+          "party": "A",
+          "municipality": "Silkeborg",
+          "email": "DortheSchou.Jensen@silkeborg.dk",
+          "role": "Formand, Socialudvalget"
         },
         {
           "name": "Johannes Vesterby",
           "party": "V",
-          "municipality": "Viborg"
-        },
-        {
-          "name": "Dorthe Schou Jensen",
-          "party": "A",
-          "municipality": "Silkeborg"
+          "municipality": "Viborg",
+          "email": "jfv@viborg.dk",
+          "role": "Formand, Ældre- og Aktivitetsudvalget"
         },
         {
           "name": "Lars Hansen",
           "party": "F",
-          "municipality": "Silkeborg"
+          "municipality": "Silkeborg",
+          "email": "Lars.Hansen@silkeborg.dk",
+          "role": "Formand, Ældre- og Sundhedsudvalget"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-midt/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Midt (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=5b70fabc-5a6b-45f4-9f66-9f4609753a9c"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Midt (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=8ba087a4-e670-41ec-99cd-b3fc9e5bfa43"
-        }
-      ]
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
+      "officialUrl": "https://www.rm.dk"
     },
     {
       "id": "vestjylland",
@@ -747,8 +1506,8 @@
         "party": "O"
       },
       "naestformand": {
-        "name": "",
-        "party": ""
+        "name": "Anders Paabøl",
+        "party": "I"
       },
       "residents": 287000,
       "memberCount": 15,
@@ -764,45 +1523,99 @@
         {
           "name": "Majbritt Birkholm",
           "party": "O",
-          "role": "Formand / Regionsrådsmedlem (også Holstebro byråd)"
+          "email": "majbbh@rm.dk",
+          "role": "Formand"
+        },
+        {
+          "name": "Anders Paabøl",
+          "party": "I",
+          "email": "anders.paabol@rr.rm.dk",
+          "role": "Næstformand"
+        },
+        {
+          "name": "Bent B. Graversen",
+          "party": "V",
+          "email": "bent.graversen@rr.rm.dk"
+        },
+        {
+          "name": "Bo Jensen",
+          "party": "C",
+          "email": "bo.jensen@rr.rm.dk"
+        },
+        {
+          "name": "Bruno Hansen",
+          "party": "V",
+          "email": "bruhan@rm.dk"
+        },
+        {
+          "name": "Michele Offenbach Holm",
+          "party": "A",
+          "email": "michun@rm.dk"
+        },
+        {
+          "name": "Nils Borring",
+          "party": "A",
+          "email": "nilbor@rm.dk"
+        },
+        {
+          "name": "Philip Vivet",
+          "party": "B",
+          "email": "phiviv@rm.dk"
         }
       ],
       "municipalMembers": [
         {
+          "name": "Anne Marie Søe Nørgaard",
+          "party": "V",
+          "municipality": "Herning",
+          "email": "byras@herning.dk",
+          "role": "Formand, Social- og Sundhedsudvalget"
+        },
+        {
+          "name": "Dorte West",
+          "party": "V",
+          "municipality": "Herning",
+          "email": "bordw@herning.dk",
+          "role": "Borgmester"
+        },
+        {
+          "name": "Gunnar Lisby Kjær",
+          "party": "V",
+          "municipality": "Lemvig",
+          "email": "gunnar.lisby.kjaer@lemvig.dk",
+          "role": "Formand, Social-, Sundheds- og Beskæftigelsesudvalget"
+        },
+        {
+          "name": "Henrik Engedahl",
+          "party": "V",
+          "municipality": "Ikast-Brande",
+          "email": "Henen@ikast-brande.dk",
+          "role": "Formand, Sundheds- og Ældreudvalget"
+        },
+        {
           "name": "Jens Kristian Hedegaard",
           "party": "V",
           "municipality": "Holstebro",
-          "role": "Formand for Social- og Sundhedsudvalget"
+          "email": "Jens.Kristian.Hedegaard@holstebro.dk",
+          "role": "Formand, Social og Sundhed"
+        },
+        {
+          "name": "Lennart Qvist",
+          "party": "C",
+          "municipality": "Ringkøbing-Skjern",
+          "email": "lennart.qvist@byr.rksk.dk",
+          "role": "Formand, Ældre- og Sundhedsudvalget"
+        },
+        {
+          "name": "Steen Jakobsen",
+          "party": "V",
+          "municipality": "Struer",
+          "email": "sja@struer.dk",
+          "role": "Formand, Ældre- og Sundhedsudvalget"
         }
       ],
-      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
-      "officialUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/sundhedsrad-vestjylland/",
-      "referater": [
-        {
-          "title": "Dagsordner og referater",
-          "url": "https://dagsorden.rm.dk/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Video fra regionsrådets møder",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/regionsradet/regionsradets-moder/video-fra-regionsradets-moder/"
-        },
-        {
-          "title": "Udvalg og mødefora",
-          "url": "https://www.rm.dk/politik/udvalg-og-modefora/"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (forberedende)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=e21e6b06-3091-43fd-9d4d-e9331cacfe45"
-        },
-        {
-          "title": "Se dagsordener og referater for Sundhedsråd Vestjylland (særligt udvalg)",
-          "url": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=c79e1f22-cb42-444b-afcc-591f35a982fb"
-        }
-      ]
+      "referaterUrl": "https://www.rm.dk/politik/udvalg-og-modefora/politiske-udvalg/sundhedsrad/",
+      "officialUrl": "https://www.rm.dk"
     },
     {
       "id": "fyn",
@@ -828,92 +1641,109 @@
         "Svendborg",
         "Ærø"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
-      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn",
-      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn",
-      "referater": [
+      "regionalMembers": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+          "name": "Annette Blynel",
+          "party": "F",
+          "role": "Formand"
         },
         {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+          "name": "Anja Lund",
+          "party": "V",
+          "role": "Næstformand"
         },
         {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+          "name": "Allan Emiliussen",
+          "party": "V"
         },
         {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+          "name": "Anne Fabricius",
+          "party": "A"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+          "name": "Bettina Eriksen",
+          "party": "I"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
+          "name": "Gitte Frederiksen",
+          "party": "V"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
+          "name": "Hans Stavnsager",
+          "party": "A"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Sønderjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
+          "name": "Kim Johansen",
+          "party": "A"
         },
         {
-          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
+          "name": "Kim Lund",
+          "party": "Æ"
         },
         {
-          "title": "Mødediæter m.m.",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
+          "name": "Martin Schmidt Konradsen",
+          "party": "Ø"
         },
         {
-          "title": "Regionsrådsmøder",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
-        },
-        {
-          "title": "Video fra regionsrådsmøderne",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
-        },
-        {
-          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
-        },
-        {
-          "title": "Akutlæge med opråb: Ring, før du møder op",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
-        },
-        {
-          "title": "Snart kan Peder møde lægen i varmestuen",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
-        },
-        {
-          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
-        },
-        {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
-        },
-        {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
-        },
-        {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+          "name": "Mikael Hansen",
+          "party": "A"
         }
-      ]
+      ],
+      "municipalMembers": [
+        {
+          "name": "Anne Skau Styrishave",
+          "party": "B",
+          "municipality": "Odense"
+        },
+        {
+          "name": "Bent Juul Sørensen",
+          "party": "Æ",
+          "municipality": "Ærø"
+        },
+        {
+          "name": "Hanne Klit",
+          "party": "A",
+          "municipality": "Svendborg"
+        },
+        {
+          "name": "Jane Yndgaard",
+          "party": "O",
+          "municipality": "Nordfyn"
+        },
+        {
+          "name": "Kristian Hald",
+          "party": "HS",
+          "municipality": "Kerteminde"
+        },
+        {
+          "name": "Lars Scheby",
+          "party": "V",
+          "municipality": "Faaborg-Midtfyn"
+        },
+        {
+          "name": "Lone Smidt",
+          "party": "A",
+          "municipality": "Nyborg"
+        },
+        {
+          "name": "Mark Søgaard",
+          "party": "A",
+          "municipality": "Assens"
+        },
+        {
+          "name": "Søren Windell",
+          "party": "C",
+          "municipality": "Odense"
+        },
+        {
+          "name": "Ulrik Kølle Hansen",
+          "party": "V",
+          "municipality": "Langeland"
+        }
+      ],
+      "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-fyn",
+      "officialUrl": "https://regionsyddanmark.dk",
+      "memberCount": 21
     },
     {
       "id": "lillebaelt",
@@ -925,7 +1755,7 @@
       },
       "naestformand": {
         "name": "Cecilie Liv Hansen",
-        "party": "I"
+        "party": "UP"
       },
       "municipalities": [
         "Kolding",
@@ -933,92 +1763,73 @@
         "Vejle",
         "Billund"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
-      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt",
-      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt",
-      "referater": [
+      "regionalMembers": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+          "name": "Joachim Hoffmann",
+          "party": "C",
+          "role": "Formand"
         },
         {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+          "name": "Cecilie Liv Hansen",
+          "party": "UP",
+          "role": "Næstformand (løsgænger)"
         },
         {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+          "name": "Andi Sejersen",
+          "party": "A"
         },
         {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+          "name": "Gitte Frederiksen",
+          "party": "V"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+          "name": "Pernelle Jensen",
+          "party": "V"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
+          "name": "Poul Erik Jensen",
+          "party": "A"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Sønderjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
-        },
-        {
-          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
-        },
-        {
-          "title": "Mødediæter m.m.",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
-        },
-        {
-          "title": "Regionsrådsmøder",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
-        },
-        {
-          "title": "Video fra regionsrådsmøderne",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
-        },
-        {
-          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
-        },
-        {
-          "title": "Akutlæge med opråb: Ring, før du møder op",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
-        },
-        {
-          "title": "Snart kan Peder møde lægen i varmestuen",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
-        },
-        {
-          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
-        },
-        {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
-        },
-        {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
-        },
-        {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+          "name": "Sara Darling Jørgensen",
+          "party": "F"
         }
-      ]
+      ],
+      "municipalMembers": [
+        {
+          "name": "Claus Behrendsen",
+          "party": "B",
+          "municipality": "Vejle"
+        },
+        {
+          "name": "Karin Riishede",
+          "party": "V",
+          "municipality": "Middelfart"
+        },
+        {
+          "name": "Malene Søgaard-Andersen",
+          "party": "F",
+          "municipality": "Fredericia"
+        },
+        {
+          "name": "Nicolai Boelsmand Asmussen",
+          "party": "V",
+          "municipality": "Kolding"
+        },
+        {
+          "name": "Rune Bønnelykke",
+          "party": "O",
+          "municipality": "Vejle"
+        },
+        {
+          "name": "Søren Rasmussen",
+          "party": "O",
+          "municipality": "Kolding"
+        }
+      ],
+      "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-lillebaelt",
+      "officialUrl": "https://regionsyddanmark.dk",
+      "memberCount": 13
     },
     {
       "id": "sydvestjylland",
@@ -1038,92 +1849,73 @@
         "Varde",
         "Vejen"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
-      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland",
-      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland",
-      "referater": [
+      "regionalMembers": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+          "name": "Mette With Hagensen",
+          "party": "A",
+          "role": "Formand"
         },
         {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+          "name": "Susanne Dyreborg",
+          "party": "Æ",
+          "role": "Næstformand"
         },
         {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+          "name": "Jan Lagoni",
+          "party": "V"
         },
         {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+          "name": "May-Britt Andrea Andersen",
+          "party": "C"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+          "name": "Melissa Gilroy",
+          "party": "B"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
+          "name": "Preben Friis-Hauge",
+          "party": "V"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Sønderjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
-        },
-        {
-          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
-        },
-        {
-          "title": "Mødediæter m.m.",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
-        },
-        {
-          "title": "Regionsrådsmøder",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
-        },
-        {
-          "title": "Video fra regionsrådsmøderne",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
-        },
-        {
-          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
-        },
-        {
-          "title": "Akutlæge med opråb: Ring, før du møder op",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
-        },
-        {
-          "title": "Snart kan Peder møde lægen i varmestuen",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
-        },
-        {
-          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
-        },
-        {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
-        },
-        {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
-        },
-        {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+          "name": "Susanne Stenstrop Thorsen",
+          "party": "F"
         }
-      ]
+      ],
+      "municipalMembers": [
+        {
+          "name": "Birthe Nielsen",
+          "party": "A",
+          "municipality": "Billund"
+        },
+        {
+          "name": "Frederik Vestergaard Jørgensen",
+          "party": "A",
+          "municipality": "Esbjerg"
+        },
+        {
+          "name": "Julie Riishøj",
+          "party": "B",
+          "municipality": "Fanø"
+        },
+        {
+          "name": "Jørgen Thøgersen",
+          "party": "A",
+          "municipality": "Vejen"
+        },
+        {
+          "name": "Tina Skov Larsen",
+          "party": "V",
+          "municipality": "Esbjerg"
+        },
+        {
+          "name": "Sarah Andersen",
+          "party": "V",
+          "municipality": "Varde"
+        }
+      ],
+      "referaterUrl": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/nyhedsarkiv/2026/januar-2026/der-er-nu-sat-navne-pa-alle-medlemmer-af-sundhedsrad-sydvestjylland",
+      "officialUrl": "https://regionsyddanmark.dk",
+      "memberCount": 13
     },
     {
       "id": "soenderjylland",
@@ -1143,92 +1935,55 @@
         "Sønderborg",
         "Tønder"
       ],
-      "regionalMembers": [],
-      "municipalMembers": [],
-      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland",
-      "officialUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland",
-      "referater": [
+      "regionalMembers": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
+          "name": "Susanne Eilersen",
+          "party": "O",
+          "role": "Formand"
         },
         {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
+          "name": "Mette Bossen Linnet",
+          "party": "V",
+          "role": "Næstformand"
         },
         {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
+          "name": "Allan Emiliussen",
+          "party": "V"
         },
         {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
+          "name": "Jette Damsø Henriksen",
+          "party": "A"
         },
         {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Sydvestjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sydvestjylland/modekalender-for-sundhedsrad-sydvestjylland"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Sønderjylland",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland/modekalender-for-sundhedsrad-sonderjylland"
-        },
-        {
-          "title": "Mødekalender for Udvalget for Miljø, Mobilitet og Uddannelse",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/udvalget-for-miljo-mobilitet-og-uddannelse/modekalender-for-udvalget-for-miljo-mobilitet-og-uddannelse"
-        },
-        {
-          "title": "Mødediæter m.m.",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/modediaeter-m-m"
-        },
-        {
-          "title": "Regionsrådsmøder",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/regionsradsmoder"
-        },
-        {
-          "title": "Video fra regionsrådsmøderne",
-          "url": "https://regionsyddanmark.dk/politik/regionsradet/video-fra-regionsradsmoderne"
-        },
-        {
-          "title": "Amar skaber magiske møder over litteraturen på tværs af generationer",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-sclerose/amar-skaber-magiske-moder-over-litteraturen-pa-tvaers-af-generationer"
-        },
-        {
-          "title": "Akutlæge med opråb: Ring, før du møder op",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-synet/akutlaege-med-oprab-ring-for-du-moder-op"
-        },
-        {
-          "title": "Snart kan Peder møde lægen i varmestuen",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/presse-og-nyheder/magasinet-sund-i-syd/tema-om-horelsen/snart-kan-peder-mode-laegen-i-varmestuen"
-        },
-        {
-          "title": "Region Syddanmarks politik og handleplan for LGBTQ+ personers møde med sundhedsvæsenet",
-          "url": "https://regionsyddanmark.dk/om-region-syddanmark/strategier-pejlemaerker-og-politikker-for-regionen/region-syddanmarks-politik-og-handleplan-for-lgbtq-personers-mode-med-sundhedsvaesenet"
-        },
-        {
-          "title": "Deltag i regionsrådsmøde",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
-        },
-        {
-          "title": "Spørgetid ved regionsrådets møder",
-          "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/sporgetid-ved-regionsradets-moder"
-        },
-        {
-          "title": "Dagsordener og referater for politiske udvalg",
-          "url": "https://regionsyddanmark.dk/politik/dagsordener-og-referater-for-politiske-udvalg"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Fyn",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+          "name": "Tage Petersen",
+          "party": "V"
         }
-      ]
+      ],
+      "municipalMembers": [
+        {
+          "name": "Anette Abildgaard Larsen",
+          "party": "C",
+          "municipality": "Tønder"
+        },
+        {
+          "name": "Didde Lauritzen",
+          "party": "A",
+          "municipality": "Sønderborg"
+        },
+        {
+          "name": "Michael Christensen",
+          "party": "F",
+          "municipality": "Aabenraa"
+        },
+        {
+          "name": "Signe Knappe",
+          "party": "V",
+          "municipality": "Haderslev"
+        }
+      ],
+      "referaterUrl": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-sonderjylland",
+      "officialUrl": "https://regionsyddanmark.dk",
+      "memberCount": 9
     }
   ],
   "parties": {
@@ -1290,6 +2045,30 @@
     },
     "S": {
       "name": "Lokalliste / ukendt bogstav",
+      "color": "#888888"
+    },
+    "T": {
+      "name": "Lokalliste (T) – fx Solrødlisten",
+      "color": "#888888"
+    },
+    "J": {
+      "name": "Lokalliste (J) – fx Lolland",
+      "color": "#888888"
+    },
+    "HL": {
+      "name": "Hvidovre Listen",
+      "color": "#888888"
+    },
+    "UP": {
+      "name": "Uden for partierne (løsgænger)",
+      "color": "#888888"
+    },
+    "ØB": {
+      "name": "Østbroen (Randers lokalliste)",
+      "color": "#888888"
+    },
+    "HS": {
+      "name": "Hverdagens Stemme (Kerteminde lokalliste)",
       "color": "#888888"
     }
   }
