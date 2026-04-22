@@ -1,0 +1,72 @@
+=== Referat-scraper startet 2026-04-22T10:06:04 ===
+
+[hovedstaden] Sundhedsråd Hovedstaden  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[amager-vestegnen] Sundhedsråd Amager og Vestegnen  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[koebenhavns-omegn] Sundhedsråd Københavns Omegn Nord  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[midt-vestsjaelland] Sundhedsråd Midt- og Vestsjælland  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[nordsjaelland] Sundhedsråd Nordsjælland  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[oestsjaelland-oerne] Sundhedsråd Østsjælland og Øerne  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[vendsyssel] Sundhedsråd Vendsyssel  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[limfjorden] Sundhedsråd Limfjorden  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[horsens] Sundhedsråd Horsens  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[kronjylland] Sundhedsråd Kronjylland  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[midt] Sundhedsråd Midt  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[vestjylland] Sundhedsråd Vestjylland  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[aarhus] Sundhedsråd Aarhus  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[fyn] Sundhedsråd Fyn  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[lillebaelt] Sundhedsråd Lillebælt  →  adapter: dagsorden_dk
+  ! ingen referaterUrl i config — springer over
+  fandt 0 referat-kandidater
+
+[sydvestjylland] Sundhedsråd Sydvestjylland  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+[soenderjylland] Sundhedsråd Sønderjylland  →  adapter: dagsorden_dk
+  ~ API svarede ikke — prøver HTML-fallback
+  fandt 0 referat-kandidater
+
+=== Færdig. 0 nye PDF'er denne kørsel. ===
+Manifest indeholder nu i alt 0 referater.
