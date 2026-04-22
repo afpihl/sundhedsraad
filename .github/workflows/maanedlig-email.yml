@@ -1,0 +1,27 @@
+name: Månedlig e-mail med nye referater
+
+on:
+  schedule:
+    - cron: "0 8 1 * *"   # 1. i hver måned kl. 08:00 UTC = kl. 09:00/10:00 dansk tid
+  workflow_dispatch:
+
+jobs:
+  email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hent repo
+        uses: actions/checkout@v4
+
+      - name: Opsæt Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Send månedlig digest-mail
+        env:
+          MAIL_FROM:          ${{ secrets.MAIL_FROM }}
+          MAIL_TO:            ${{ secrets.MAIL_TO }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GITHUB_REPO:        ${{ github.repository }}
+          DAYS:               "35"
+        run: python3 send_referat_email.py
