@@ -1,0 +1,27 @@
+{
+  "_description": "URL-konfiguration for hvert af de 17 sundhedsråd. Opdater 'referaterUrl' hvis scraperen klager — committeeId hentes automatisk fra URL'en.",
+  "_note": "Alle fire regioner bruger FirstAgenda-platformen (samme system, forskelligt subdomæne pr. region). Hvert råd identificeres med et udvalgId (UUID) i URL'en efter '?request.kriterie.udvalgId='.",
+  "_last_verified": "2026-04-20 (af Andreas, fra regionernes officielle dagsorden-portaler)",
+  "councils": {
+    "hovedstaden":         { "region": "oestdanmark", "adapter": "dagsorden_dk", "name": "Sundhedsråd Hovedstaden",            "referaterUrl": "https://dagsorden.regionoest.dk/?request.kriterie.udvalgId=7f6ccbb0-be64-4f80-986e-40c47ebf1ef1" },
+    "amager-vestegnen":    { "region": "oestdanmark", "adapter": "dagsorden_dk", "name": "Sundhedsråd Amager og Vestegnen",    "referaterUrl": "https://dagsorden.regionoest.dk/?request.kriterie.udvalgId=b15cd21e-5841-41aa-af35-346d375d6cc3" },
+    "koebenhavns-omegn":   { "region": "oestdanmark", "adapter": "dagsorden_dk", "name": "Sundhedsråd Københavns Omegn Nord",  "referaterUrl": "https://dagsorden.regionoest.dk/?request.kriterie.udvalgId=f3b0bb32-fa57-4226-9c33-2adba5cfe534" },
+    "midt-vestsjaelland":  { "region": "oestdanmark", "adapter": "dagsorden_dk", "name": "Sundhedsråd Midt- og Vestsjælland",  "referaterUrl": "https://dagsorden.regionoest.dk/?request.kriterie.udvalgId=f3fdef57-f170-42af-959f-fc08a3ad6e9b" },
+    "nordsjaelland":       { "region": "oestdanmark", "adapter": "dagsorden_dk", "name": "Sundhedsråd Nordsjælland",           "referaterUrl": "https://dagsorden.regionoest.dk/?request.kriterie.udvalgId=7c9b0a6c-fe44-43db-834c-bbb736426722" },
+    "oestsjaelland-oerne": { "region": "oestdanmark", "adapter": "dagsorden_dk", "name": "Sundhedsråd Østsjælland og Øerne",   "referaterUrl": "https://dagsorden.regionoest.dk/?request.kriterie.udvalgId=b76fae69-b13e-4761-a067-39d4b7e23c25" },
+
+    "vendsyssel":          { "region": "nordjylland", "adapter": "dagsorden_dk", "name": "Sundhedsråd Vendsyssel",             "referaterUrl": "https://dagsordener.rn.dk/?request.kriterie.udvalgId=4933f8cd-4a3a-486e-a30d-b8e4be7e86f9" },
+    "limfjorden":          { "region": "nordjylland", "adapter": "dagsorden_dk", "name": "Sundhedsråd Limfjorden",             "referaterUrl": "https://dagsordener.rn.dk/?request.kriterie.udvalgId=6b0151b3-1b6d-43ae-9062-942498dc720c" },
+
+    "horsens":             { "region": "midtjylland", "adapter": "dagsorden_dk", "name": "Sundhedsråd Horsens",                "referaterUrl": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=482bb09b-7985-4a23-ac66-844c6e532f9f" },
+    "kronjylland":         { "region": "midtjylland", "adapter": "dagsorden_dk", "name": "Sundhedsråd Kronjylland",            "referaterUrl": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=296d8b21-9333-4b56-a59b-c1904f10f395" },
+    "midt":                { "region": "midtjylland", "adapter": "dagsorden_dk", "name": "Sundhedsråd Midt",                   "referaterUrl": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=5b70fabc-5a6b-45f4-9f66-9f4609753a9c" },
+    "vestjylland":         { "region": "midtjylland", "adapter": "dagsorden_dk", "name": "Sundhedsråd Vestjylland",            "referaterUrl": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=e21e6b06-3091-43fd-9d4d-e9331cacfe45" },
+    "aarhus":              { "region": "midtjylland", "adapter": "dagsorden_dk", "name": "Sundhedsråd Aarhus",                 "referaterUrl": "https://dagsorden.rm.dk/?request.kriterie.udvalgId=0788a937-0235-4348-8977-ccd7a310b18d" },
+
+    "fyn":                 { "region": "syddanmark",  "adapter": "dagsorden_dk", "name": "Sundhedsråd Fyn",                    "referaterUrl": "https://dagsordener-referater.regionsyddanmark.dk/?request.kriterie.udvalgId=ca441349-474b-4e42-b637-bbc4d0f09745" },
+    "lillebaelt":          { "region": "syddanmark",  "adapter": "dagsorden_dk", "name": "Sundhedsråd Lillebælt",              "referaterUrl": "",                                                                                                                 "_note": "URL mangler — Andreas kan finde udvalgId på https://dagsordener-referater.regionsyddanmark.dk og indsætte her" },
+    "sydvestjylland":      { "region": "syddanmark",  "adapter": "dagsorden_dk", "name": "Sundhedsråd Sydvestjylland",         "referaterUrl": "https://dagsordener-referater.regionsyddanmark.dk/?request.kriterie.udvalgId=65ae9355-f32a-4ff2-ae13-a1789685c9d7" },
+    "soenderjylland":      { "region": "syddanmark",  "adapter": "dagsorden_dk", "name": "Sundhedsråd Sønderjylland",          "referaterUrl": "https://dagsordener-referater.regionsyddanmark.dk/?request.kriterie.udvalgId=b8329e67-7e21-4b23-abde-1cb4fb3ef557" }
+  }
+}
