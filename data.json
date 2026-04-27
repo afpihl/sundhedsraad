@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-04-21",
+    "lastUpdated": "2026-04-27",
     "dataVersion": "0.1.0",
     "note": "Fuldt datasæt for Region Østdanmark er verificeret via de officielle første referater (januar 2026). Region Nordjylland, Midtjylland og Syddanmark er delvis udfyldt — tilføj flere referater for at komplettere.",
     "sources": [
@@ -29,7 +29,7 @@
         "url": "https://lex.dk/sundhedsr%C3%A5d"
       }
     ],
-    "lastScrapeRun": "2026-04-21T10:06:08.891352+00:00"
+    "lastScrapeRun": "2026-04-27T11:28:25.467048+00:00"
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
