@@ -1,4 +1,4 @@
-=== Referat-scraper startet 2026-05-02T08:54:54 ===
+=== Referat-scraper startet 2026-05-03T09:51:29 ===
 
 [hovedstaden] Sundhedsråd Hovedstaden  →  adapter: dagsorden_dk
   ~ API svarede ikke — prøver HTML-fallback
