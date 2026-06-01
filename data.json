@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-31",
+    "lastUpdated": "2026-06-01",
     "dataVersion": "0.1.0",
     "note": "Fuldt datasæt for Region Østdanmark er verificeret via de officielle første referater (januar 2026). Region Nordjylland, Midtjylland og Syddanmark er delvis udfyldt — tilføj flere referater for at komplettere.",
     "sources": [
@@ -29,7 +29,7 @@
         "url": "https://lex.dk/sundhedsr%C3%A5d"
       }
     ],
-    "lastScrapeRun": "2026-05-31T08:13:35.173877+00:00"
+    "lastScrapeRun": "2026-06-01T10:17:46.892757+00:00"
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
@@ -1877,10 +1877,6 @@
       "memberCount": 21,
       "referater": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
-        },
-        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -1955,6 +1951,10 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     },
@@ -2045,10 +2045,6 @@
       "memberCount": 13,
       "referater": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
-        },
-        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -2123,6 +2119,10 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     },
@@ -2213,10 +2213,6 @@
       "memberCount": 13,
       "referater": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
-        },
-        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -2291,6 +2287,10 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     },
@@ -2363,10 +2363,6 @@
       "memberCount": 9,
       "referater": [
         {
-          "title": "Inspirationskatalog fra møde om grænselandets potentialer den 3. maj 2022",
-          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/dansk-tysk-og-internationalt-samarbejde/inspirationskatalog-fra-mode-om-graenselandets-potentialer-den-3-maj-2022"
-        },
-        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -2441,6 +2437,10 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
+        },
+        {
+          "title": "Mødekalender for Sundhedsråd Lillebælt",
+          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     }
