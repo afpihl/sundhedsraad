@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-04",
+    "lastUpdated": "2026-10-05",
     "dataVersion": "0.1.0",
     "note": "Fuldt datasæt for Region Østdanmark er verificeret via de officielle første referater (januar 2026). Region Nordjylland, Midtjylland og Syddanmark er delvis udfyldt — tilføj flere referater for at komplettere.",
     "sources": [
@@ -29,7 +29,7 @@
         "url": "https://lex.dk/sundhedsr%C3%A5d"
       }
     ],
-    "lastScrapeRun": "2026-10-04T10:53:42.269752+00:00"
+    "lastScrapeRun": "2026-10-05T12:02:16.467773+00:00"
   },
   "economy": {
     "headline": "325 mio. kr. i 2026 — op mod 2 mia. kr. årligt i 2030",
@@ -1877,6 +1877,10 @@
       "memberCount": 21,
       "referater": [
         {
+          "title": "Informationsmøder, åbent hus m.m. på de syddanske ungdomsuddannelser",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/uddannelse/for-dig-der-soger-ind-pa-en-ungdomsuddannelse/informationsmoder-abent-hus-m-m-pa-de-syddanske-ungdomsuddannelser"
+        },
+        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -1951,10 +1955,6 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     },
@@ -2045,6 +2045,10 @@
       "memberCount": 13,
       "referater": [
         {
+          "title": "Informationsmøder, åbent hus m.m. på de syddanske ungdomsuddannelser",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/uddannelse/for-dig-der-soger-ind-pa-en-ungdomsuddannelse/informationsmoder-abent-hus-m-m-pa-de-syddanske-ungdomsuddannelser"
+        },
+        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -2119,10 +2123,6 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     },
@@ -2213,6 +2213,10 @@
       "memberCount": 13,
       "referater": [
         {
+          "title": "Informationsmøder, åbent hus m.m. på de syddanske ungdomsuddannelser",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/uddannelse/for-dig-der-soger-ind-pa-en-ungdomsuddannelse/informationsmoder-abent-hus-m-m-pa-de-syddanske-ungdomsuddannelser"
+        },
+        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -2287,10 +2291,6 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     },
@@ -2363,6 +2363,10 @@
       "memberCount": 9,
       "referater": [
         {
+          "title": "Informationsmøder, åbent hus m.m. på de syddanske ungdomsuddannelser",
+          "url": "https://regionsyddanmark.dk/uddannelse-trafik-og-samarbejde/uddannelse/for-dig-der-soger-ind-pa-en-ungdomsuddannelse/informationsmoder-abent-hus-m-m-pa-de-syddanske-ungdomsuddannelser"
+        },
+        {
           "title": "Deltag i regionsrådsmøde",
           "url": "https://regionsyddanmark.dk/politik/borgerinddragelse-og-indflydelse/deltag-i-regionsradsmode"
         },
@@ -2437,10 +2441,6 @@
         {
           "title": "Mødekalender for Sundhedsråd Fyn",
           "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-fyn/modekalender-for-sundhedsrad-fyn"
-        },
-        {
-          "title": "Mødekalender for Sundhedsråd Lillebælt",
-          "url": "https://regionsyddanmark.dk/politik/politiske-udvalg-og-hverv/sundhedsrad-lillebaelt/modekalender-for-sundhedsrad-lillebaelt"
         }
       ]
     }
