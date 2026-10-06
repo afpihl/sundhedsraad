@@ -1,4 +1,4 @@
-=== Referat-scraper startet 2026-10-03T10:12:29 ===
+=== Referat-scraper startet 2026-10-06T11:47:58 ===
 
 [hovedstaden] Sundhedsråd Hovedstaden  →  adapter: dagsorden_dk
   ~ API svarede ikke — prøver HTML-fallback
@@ -26,10 +26,12 @@
 
 [vendsyssel] Sundhedsråd Vendsyssel  →  adapter: dagsorden_dk
   ~ API svarede ikke — prøver HTML-fallback
+  ! kunne ikke hente https://dagsordener.rn.dk/?request.kriterie.udvalgId=4933f8cd-4a3a-486e-a30d-b8e4be7e86f9: HTTPSConnectionPool(host='dagsordener.rn.dk', port=443): Max retries exceeded with url: /?request.kriterie.udvalgId=4933f8cd-4a3a-486e-a30d-b8e4be7e86f9 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)')))
   fandt 0 referat-kandidater
 
 [limfjorden] Sundhedsråd Limfjorden  →  adapter: dagsorden_dk
   ~ API svarede ikke — prøver HTML-fallback
+  ! kunne ikke hente https://dagsordener.rn.dk/?request.kriterie.udvalgId=6b0151b3-1b6d-43ae-9062-942498dc720c: HTTPSConnectionPool(host='dagsordener.rn.dk', port=443): Max retries exceeded with url: /?request.kriterie.udvalgId=6b0151b3-1b6d-43ae-9062-942498dc720c (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)')))
   fandt 0 referat-kandidater
 
 [horsens] Sundhedsråd Horsens  →  adapter: dagsorden_dk
